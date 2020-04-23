@@ -1,9 +1,10 @@
 /*
-Application template for lora-dev-board with Arduino Pro Mini
--------------------------------------------------------------
-Board version:       1.0
-Board configuration: RN2483
-*/
+ * Application template for lora-dev-board
+ * ---------------------------------------
+ * Board version: 1.0
+ * Board config: Arduino Pro Mini + RN2483
+ * ---------------------------------------
+ */
 #include <TheThingsNetwork.h>
 #include <SoftwareSerial.h>
 #include <LowPower.h>
@@ -13,11 +14,15 @@ Board configuration: RN2483
 #define JOIN_MODE_OTAA
 
 
-// ------- outputs and interfaces (see lora-dev-board scheme)
-#define USER_LED 2 
-#define VOUT 3 
-SoftwareSerial userSerial(8, 9); // RX, TX
-SoftwareSerial rnSerial(6, 7); // RX, TX
+// ------- inputs, outputs and interfaces (see lora-dev-board scheme)
+
+#define USER_LED 2 // additional LED
+#define VOUT_ENABLE 3 // output voltage (TP5) control (VCC/VBAT - depends on JP9)
+
+SoftwareSerial userSerial(8, 9); // GPSP available on J3 (RX, TX)
+SoftwareSerial rnSerial(6, 7); // SP for RN2483 (RX, TX)
+
+#define VBAT (analogRead(A0) * 0.00424568) // battery voltage measured on A0
 
 // ------- LoRaWAN configuration
 
@@ -56,6 +61,7 @@ void getData()
 #ifndef JUST_SEND_HELLO
   lppdata.reset();
   // here you can read data from sensors and prepare buffer to send
+  lppdata.addAnalogInput(1, VBAT); // add battery voltage
 #endif
 }
 
@@ -65,7 +71,7 @@ void setup()
   userSerial.begin(9600);
   
   pinMode(USER_LED, OUTPUT);
-  pinMode(VOUT, OUTPUT);
+  pinMode(VOUT_ENABLE, OUTPUT);
   
   rnSerial.begin(9600);
   ttn.wake();

@@ -1,9 +1,10 @@
 /*
-Application template for lora-dev-board with Arduino Pro Mini
--------------------------------------------------------------
-Board version:       1.0
-Board configuration: RFM95W
-*/
+ * Application template for lora-dev-board
+ * ---------------------------------------
+ * Board version: 1.0
+ * Board config: Arduino Pro Mini + RFM95W
+ * ---------------------------------------
+ */
 #include <lmic.h>
 #include <hal/hal.h>
 #include <SPI.h>
@@ -11,14 +12,18 @@ Board configuration: RFM95W
 #include <CayenneLPP.h>
 #include <LowPower.h>
 
-#define JUST_SEND_HELLO
+#define JUST_SEND_HELLO 
 #define SAVE_ENERGY
 
 
-// ------- outputs and interfaces (see lora-dev-board scheme)
-#define USER_LED 2 
-#define VOUT 3 
-SoftwareSerial userSerial(8, 9); // RX, TX
+// ------- inputs, outputs and interfaces (see lora-dev-board circuit diagram)
+
+#define USER_LED 2 // additional LED
+#define VOUT_ENABLE 3 // output voltage (TP5) control (VCC/VBAT - depends on JP9)
+
+SoftwareSerial userSerial(8, 9); // GPSP available on J3 (RX, TX)
+
+#define VBAT (analogRead(A0) * 0.00424568) // battery voltage measured on A0
 
 // ------- LoRaWAN configuration
 
@@ -32,12 +37,12 @@ void os_getArtEui (u1_t* buf) { }
 void os_getDevEui (u1_t* buf) { }
 void os_getDevKey (u1_t* buf) { }
 
-// pin mapping for SX1276 (see lora-dev-board scheme)
+// pin mapping for SX1276 (see lora-dev-board circuit diagram)
 const lmic_pinmap lmic_pins = {
     .nss = 10,
     .rxtx = LMIC_UNUSED_PIN,
     .rst = 4,
-    .dio = { 5, 7, LMIC_UNUSED_PIN },
+    .dio = { 5, 7, LMIC_UNUSED_PIN }, // or { 5, 7, 6 } if JP3 is in DIO2 position
 };
 
 // ------- tasks, intervals, buffers, etc.
@@ -62,6 +67,7 @@ void getData()
 #ifndef JUST_SEND_HELLO
   lppdata.reset();
   // here you can read data from sensors and prepare buffer to send
+  lppdata.addAnalogInput(1, VBAT); // add battery voltage
 #endif
 }
 
@@ -179,7 +185,7 @@ void setup()
   userSerial.begin(9600);
   
   pinMode(USER_LED, OUTPUT);
-  pinMode(VOUT, OUTPUT);
+  pinMode(VOUT_ENABLE, OUTPUT);
 
   Serial.println("--- PERSONALIZE");
   os_init();
