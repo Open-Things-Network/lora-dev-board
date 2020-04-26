@@ -823,11 +823,11 @@ L Transistor_FET:DMG2301L Q2
 U 1 1 5E33B813
 P 9500 5450
 F 0 "Q2" H 9704 5496 50  0000 L CNN
-F 1 "DMG2301L" H 9704 5405 50  0000 L CNN
+F 1 "YJL2301F" H 9704 5405 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 9700 5375 50  0001 L CIN
 F 3 "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf" H 9500 5450 50  0001 L CNN
 	1    9500 5450
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:VCC #PWR0129
