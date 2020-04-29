@@ -7,6 +7,7 @@
  */
 #include <TheThingsNetwork.h>
 #include <SoftwareSerial.h>
+#include <CayenneLPP.h>
 #include <LowPower.h>
 
 #define JUST_SEND_HELLO
