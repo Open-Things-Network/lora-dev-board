@@ -17,7 +17,7 @@ Platforma została zaprojektowana tak, aby jej zbudowanie i uruchomienie było m
 
 ## Jak zacząć?
 
-Poniższe punkty zostaną wkrótce uzupełnione opismi.
+Poniższe punkty zostaną wkrótce uzupełnione opisami.
 
 * Projekt płytki: kompletacja elementów i budowa urządzenia
 * Uruchomienie bazowej aplikacji wysyłającej informacje o stanie urządzenia
