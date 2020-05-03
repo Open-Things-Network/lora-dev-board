@@ -12,3 +12,10 @@ Uniwersalna platforma sprzętowa ułatwiająca projektowanie i testowanie urząd
 * zastosowanie popularnego jednopłytkowego mikrokontrolera Arduino Pro Mini
 * współpraca z najczęściej stosowanymi układami nadawczo-odbiorczymi LoRa: RFM95 lub RN2483
 * wykorzystanie różnych źródeł zasilania
+
+## Jak zacząć?
+
+Poniższe punkty zostaną wkrótce uzupełnione opismi.
+
+* Projekt płytki: kompletacja elementów i budowa urządzenia
+* Uruchomienie bazowej aplikacji wysyłającej informacje o stanie urządzenia
