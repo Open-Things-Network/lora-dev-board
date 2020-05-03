@@ -11,9 +11,9 @@ Uniwersalna platforma sprzętowa ułatwiająca projektowanie i testowanie urząd
 
 Platforma została zaprojektowana tak, aby jej zbudowanie i uruchomienie było możliwe dla hobbystów posiadających podstawowe umiejętności w zakresie budowanie układów elektronicznych oraz programowania. Zgodnie z tym  przyjęto też dodatkowe założenia: 
 
-* Zastosowanie popularnego jednopłytkowego mikrokontrolera Arduino Pro Mini
-* Współpraca z najczęściej stosowanymi układami nadawczo-odbiorczymi LoRa: RFM95 lub RN2483
-* Wykorzystanie różnych źródeł zasilania, w tym standardowych baterii 1.5V oraz 3V.
+* Zastosowanie popularnej płytki Arduino Pro Mini z mikrokontrolerem ATmega328P
+* Współpraca z najczęściej stosowanymi układami nadawczo-odbiorczymi LoRa: RFM95W lub RN2483
+* Wykorzystanie różnych źródeł zasilania, w tym standardowych baterii alkalicznych, baterii litowych oraz akumulatorów litowo-polimerowych lub litowo-jonowych.
 
 ## Jak zacząć?
 
