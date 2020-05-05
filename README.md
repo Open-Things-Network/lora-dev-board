@@ -19,5 +19,5 @@ Platforma została zaprojektowana tak, aby jej zbudowanie i uruchomienie było m
 
 Poniższe punkty zostaną wkrótce uzupełnione opisami.
 
-* Projekt płytki: kompletacja elementów i budowa urządzenia
+* Projekt płytki: [kompletacja elementów](https://github.com/Open-Things-Network/lora-dev-board/blob/master/v1.0/README.md#lista-elementów) i budowa urządzenia
 * Uruchomienie bazowej aplikacji wysyłającej informacje o stanie urządzenia
