@@ -38,34 +38,39 @@ Do podłączenia zewnętrznych czujników dostępne są interfejsy:
 ## Pomiar napięcia baterii
 Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6.
 
+W kolumnach A,B,C ... zaznaczone zostały elementy wymagane (+) oraz opcjonalne (\*) dla specyficznej wersji urządzenia
+
+* A - zasilanie bateryjne, czujniki analogowe
+* B - nazwa wersji
+
 # Lista elementów
-| Nazwa | Element | Ilość | Uwagi |
-|-------|---------|-------|-------|
-|uchwyt baterii AA|KEYSTONE 2915|2||
-|BAT,SOLAR|JST-PH 2pin 2mm|2||
-|C1,C4|4,7μF MLCC 1206|2||
-|C2|100nF MLCC 1206|1||
-|C3|22uF 6,3V Tantalum CASE:A|1||
-|D1,D2,D3|SMD 1206|3|diody LED (LED,VCC,CHR)|
-|J1|Wurth Elektronik 629105136821 Micro Usb|1||
-|J2|U.FL 50R|1|gniazdo antenowe|
-|J3|WR-PHD 2.54 mm SMT Pin Header 61000418221|1|interfejs szeregowy|
-|J4|WR-PHD 2.54 mm SMT Dual Pin Header 61000821121|1|interfejs I2C|
-|Q1|BC817 SOT-23|1||
-|Q2|YJL2301F SOT-23|1||
-|R11|51R SMD 1206|1||
-|R10|470R SMD 1206|1||
+| Nazwa | Element | Ilość | Uwagi |A|
+|-------|---------|-------|-------|-|
+|uchwyt baterii AA|KEYSTONE 2915|2||+|
+|BAT,SOLAR|JST-PH 2pin 2mm|2|| | |
+|C1,C4|4,7μF MLCC 1206|2|| |
+|C2|100nF MLCC 1206|1||+|
+|C3|22uF 6,3V Tantalum CASE:A|1||+|
+|D1,D2,D3|SMD 1206|3|diody LED (LED,VCC,CHR)| |
+|J1|Wurth Elektronik 629105136821 Micro Usb|1||*|
+|J2|U.FL 50R|1|gniazdo antenowe|*| 
+|J3|WR-PHD 2.54 mm SMT Pin Header 61000418221|1|interfejs szeregowy| |
+|J4|WR-PHD 2.54 mm SMT Dual Pin Header 61000821121|1|interfejs I2C| |
+|Q1|BC817 SOT-23|1|| |
+|Q2|YJL2301F SOT-23|1|| |
+|R11|51R SMD 1206|1|| |
+|R10|470R SMD 1206|1|| |
 |R4,R8,R9|1k SMD 1206|3||
-|R1|4k SMD 1206|1||
-|R2,R3,R7,R12|10k SMD 1206|4||
-|R6|33k SMD 1206|1||
-|R5|100k SMD 1206|1||
-|SW1|Slide Switch 1P2T os102011ma1qn1|1|włącznik zasilania|
-|U1|RFM95W|1|**dotyczy tylko wersji z RFM95W**|
-|U2|TS2940-3.3 SOT-223|1|regulator napięcia LDO|
-|U3|MCP73831-2-OT|1|kontroler ładowania baterii Li-Po/Li-Ion|
-|U4|RN2483A|1|**dotyczy tylko wersji z RN2483A**|
-|U5|Arduino Pro Mini|1||
+|R1|4k SMD 1206|1|| |
+|R2,R3,R7,R12|10k SMD 1206|4|| |
+|R6|33k SMD 1206|1||+|
+|R5|100k SMD 1206|1||+|
+|SW1|Slide Switch 1P2T os102011ma1qn1|1|włącznik zasilania| |
+|U1|RFM95W|1|**dotyczy tylko wersji z RFM95W**|+|
+|U2|TS2940-3.3 SOT-223|1|regulator napięcia LDO|+|
+|U3|MCP73831-2-OT|1|kontroler ładowania baterii Li-Po/Li-Ion| |
+|U4|RN2483A|1|**dotyczy tylko wersji z RN2483A**| |
+|U5|Arduino Pro Mini|1||+|
 
 # Uwagi
 W schemacie została wprowadzona zmiana elementu **Q2** na **YJL2301F** oraz jego połączeniu. 
