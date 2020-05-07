@@ -6,6 +6,12 @@ stabilizator napięcia wbidowany w Arduino Pro Mini, można pominąć montaż na
 
 ## Wymagane elementy
 
+| Nazwa | Element | Ilość | Uwagi |A|B|
+|-------|---------|-------|-------|-|-|
+|Moduł micro USB| |1| |*| |
+|U1|RFM95W|1|**dotyczy tylko wersji z RFM95W**|+|+|
+|U5|Arduino Pro Mini|1||+|+|
+
 ## Lista czynności
 
 1. Zamówienie PCB
@@ -13,3 +19,15 @@ stabilizator napięcia wbidowany w Arduino Pro Mini, można pominąć montaż na
 3. Podłączenie RFM95W
 4. Wgrywanie oprogramowania
 5. Uruchomienie
+
+### Zamówienie PCB
+
+### Podłączenie Arduino Pro Mini
+
+### Podłączenie RFM95W
+
+### Podłączenie RFM95W
+
+### Wgrywanie oprogramowania
+
+### Uruchomienie
