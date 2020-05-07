@@ -40,7 +40,7 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6.
 
 W kolumnach A,B,C ... zaznaczone zostały elementy wymagane (+) oraz opcjonalne (\*) dla specyficznej wersji urządzenia
 
-* A - wersja minimalna
+* A - wersja minimalna [doc/A_minimal.md](doc/A_minimal.md)
 * B - zasilanie bateryjne, czujniki analogowe
 * C - nazwa wersji
 
