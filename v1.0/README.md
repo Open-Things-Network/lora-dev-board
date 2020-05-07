@@ -47,6 +47,7 @@ W kolumnach A,B,C ... zaznaczone zostały elementy wymagane (+) oraz opcjonalne 
 # Lista elementów
 | Nazwa | Element | Ilość | Uwagi |A|B|
 |-------|---------|-------|-------|-|-|
+|Moduł micro USB| |1| |*| |
 |uchwyt baterii AA|KEYSTONE 2915|2|| |+|
 |BAT,SOLAR|JST-PH 2pin 2mm|2|| | | |
 |C1,C4|4,7μF MLCC 1206|2|| | |
