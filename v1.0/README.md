@@ -3,17 +3,17 @@
 ![pcb overview](Media/pcb-overview.png)
 
 # Spis treści:
-1. [Opis płytki](#Opis płytki)
-2. [Arduino Pro Mini](#Arduino Pro_Mini)
-3. [Interfejs LoRaWAN](#Interfejs LoRaWAN)
-4. [Układ zasilania](#Układ zasilania)
-5. [Układ ładowania](#Układ ładowania)
-6. [Diody LED](#Diody LED)
-7. [Interfejsy komunikacyjne](#Interfejsy komunikacyjne)
-8. [Pomiar napięcia baterii](#Pomiar napięcia_baterii)
-9. [Sterowanie zasilaniem układów zewnętrznych](#Sterowanie zasilaniem układów zewnętrznych)
+1. [Opis płytki](#Opis-płytki)
+2. [Arduino Pro Mini](#Arduino-Pro_Mini)
+3. [Interfejs LoRaWAN](#Interfejs-LoRaWAN)
+4. [Układ zasilania](#Układ-zasilania)
+5. [Układ ładowania](#Układ-ładowania)
+6. [Diody LED](#Diody-LED)
+7. [Interfejsy komunikacyjne](#Interfejsy-komunikacyjne)
+8. [Pomiar napięcia baterii](#Pomiar-napięcia_baterii)
+9. [Sterowanie zasilaniem układów zewnętrznych](#Sterowanie-zasilaniem-układów-zewnętrznych)
 10. [Zworki](#Zworki)
-11. [Lista elementów](#Lista elementów)
+11. [Lista elementów](#Lista-elementów)
 
 # Opis płytki
 Możliwe warianty konfiguracji:
