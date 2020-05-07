@@ -82,7 +82,7 @@ W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) 
 | Nazwa | Element |A|B|C|D| Sekcja |
 |-------|---------|-|-|-|-|--------|
 |U5|Arduino Pro Mini|+|+|+|+| |
-|U1|RFM95W **dotyczy tylko wersji z RFM95W**||+|+|+|+|RFM9W|
+|U1|RFM95W **dotyczy tylko wersji z RFM95W**|+|+|+|+|RFM9W|
 |U4|RN2483A **dotyczy tylko wersji z RN2483A**|+|+|+|+|RN2483A|
 |R11|51R SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|RN2483A|
 |R12|10k SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|RN2483A|
