@@ -62,15 +62,15 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6.
 ## Zworki
 |Symbol|Nazwa|Przeznaczenie|
 |------|-----|-------------|
-|JP4|PWR ON||
-|JP2|VCC/VBAT||
-|JP9|OUT VBAT/VCC||
-|JP3|DIO2/D6||
-|JP7|SCL||
-|JP8|SDA||
-|JP5|RX||
-|JP6|TX||
-|JP1|LED RN||
+|JP4|PWR ON|Zawsze włączone (ominięcie mechanicznego włącznika)|
+|JP2|VCC/VBAT|Zwarcie spowoduje bezpośrednie podanie napięcia z złącz baterii na VCC Arduino|
+|JP9|OUT VBAT/VCC|Napięcie zasilania układów zewnętrznych|
+|JP3|DIO2/D6|Zwarcie DIO2: Dodatkowe sterowanie **RFM95W**; Zwarcie D6: Dodatkowe wyjście/wyjście na zewnątrz|
+|JP7|SCL|Tylko z wykorzystaniem **RN2483A** bez Arduino|
+|JP8|SDA|Tylko z wykorzystaniem **RN2483A** bez Arduino|
+|JP5|RX|Tylko z wykorzystaniem **RN2483A** bez Arduino|
+|JP6|TX|Tylko z wykorzystaniem **RN2483A** bez Arduino|
+|JP1|LED RN|Tylko z wykorzystaniem **RN2483A** bez Arduino|
 
 # Lista elementów
 W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich konfiguracji urządzenia:
@@ -92,7 +92,7 @@ W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) 
 |C3|22uF 6,3V Tantalum CASE:A|+| |\*|\*|Zasilanie|
 |SW1|Switch 1P2T os102011ma1qn1 włącznik zasilania|\*|\*|\*|\*|Zasilanie|
 |J1|Wurth Elektronik 629105136821 Micro Usb|+| | |\*|Zasilanie i Ładowarka|
-|bateria AA|KEYSTONE 2915 (wymagne dwie sztuki na płytkę)|\*|\*|\*|\*|Zasilanie i Ładowarka|
+|bateria AA|KEYSTONE 2915 **wymagne dwie sztuki na płytkę**|\*|\*|\*|\*|Zasilanie i Ładowarka|
 |BAT|JST-PH 2pin 2mm|\*|\*|\*|\*|Zasilanie i Ładowarka|
 |U3|MCP73831-2-OT kontroler ładowania|\*| | |\*|Ładowarka|
 |C1|4,7μF MLCC 1206|\*| | |\*|Ładowarka|
