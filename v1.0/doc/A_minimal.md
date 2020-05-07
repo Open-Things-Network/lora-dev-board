@@ -2,7 +2,7 @@
 
 Wersja minimalna urządzenia jest najłatwiejsza do zbudowania dla początkującego użytkownika. 
 Wymaga zastosowania zewnętrznego zasilacza USB podłączonego bezpośrednio do Arduino. Ponieważ wykorzystuje 
-stabilizator napięcia wbidowany w Arduino Pro Mini, można pominąć montaż na płytce dodatkowych komponentów SMD.
+stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na płytce dodatkowych komponentów SMD.
 
 ## Wymagane elementy
 
