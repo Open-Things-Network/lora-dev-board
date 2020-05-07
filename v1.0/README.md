@@ -41,16 +41,17 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6.
 ## Sterowanie zasilaniem układów zewnętrznych
 
 ## Zworki
-|Nazwa|Przeznaczenie|
-|PWR ON (JP4)||
-|VCC/VBAT (JP2)||
-|OUT VBAT/VCC (JP9)||
-|DIO2/D6 (JP3)||
-|SCL (JP7)||
-|SDA (JP8)||
-|RX (JP5)||
-|TX (JP6)||
-|LED RN (JP1)||
+|Symbol|Nazwa|Przeznaczenie|
+|------|-----|-------------|
+|JP4|PWR ON||
+|JP2|VCC/VBAT||
+|JP9|OUT VBAT/VCC||
+|JP3|DIO2/D6||
+|JP7|SCL||
+|JP8|SDA||
+|JP5|RX||
+|JP6|TX||
+|JP1|LED RN||
 
 # Lista elementów
 W kolumnach A,B,C ... zaznaczone zostały elementy wymagane (+) oraz opcjonalne (\*) dla specyficznej wersji urządzenia
