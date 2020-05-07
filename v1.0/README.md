@@ -14,6 +14,7 @@
 9. [Sterowanie zasilaniem układów zewnętrznych](#Sterowanie-zasilaniem-układów-zewnętrznych)
 10. [Zworki](#Zworki)
 11. [Lista elementów](#Lista-elementów)
+12. [Uwagi](#Uwagi)
 
 # Opis płytki
 Możliwe warianty konfiguracji:
