@@ -6,11 +6,14 @@ stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na
 
 ## Wymagane elementy
 
-| Nazwa | Element | Ilość | Uwagi |
+| Nr| Element | Ilość | Uwagi |
 |-------|---------|-------|-------|
-|Moduł micro USB| |1| |
-|U1|RFM95W|1||
-|U5|Arduino Pro Mini|1||
+|1|Moduł micro USB|1| Umożliwia zastosowanie standardowego zasilacza USB 5V|
+|2|Konwerter USB-UART|1| Konieczny do wgrania oprogramowania do Arduino|
+|3|RFM95W|1| Moduł nadawczo-odbiorczy LoRa 868 MHz|
+|4|Arduino Pro Mini|1||
+
+
 
 ## Lista czynności
 
