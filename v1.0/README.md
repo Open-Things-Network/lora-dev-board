@@ -2,11 +2,29 @@
 
 ![pcb overview](Media/pcb-overview.png)
 
+# Spis treści:
+1. [Opis płytki](#Opis_płytki)
+2. [Arduino Pro Mini](#Arduino_Pro_Mini)
+3. [Interfejs LoRaWAN](#Interfejs_LoRaWAN)
+4. [Układ zasilania](#Układ_zasilania)
+5. [Układ ładowania](#Układ_ładowania)
+6. [Diody LED](#Diody_LED)
+7. [Interfejsy komunikacyjne](#Interfejsy_komunikacyjne)
+8. [Pomiar napięcia baterii](#Pomiar_napięcia_baterii)
+9. [Sterowanie zasilaniem układów zewnętrznych](#Sterowanie_zasilaniem_układów_zewnętrznych)
+10. [Zworki](#Zworki)
+11. [Lista elementów](#Lista_elementów)
+
 # Opis płytki
 Możliwe warianty konfiguracji:
 1. Arduino Pro Mini i RFM95W 
 2. Arduino Pro Mini i RN2483A
 3. RN2483A
+
+Szczegółowe instrukcje dla wersji montażowych:
+* Wersja minimalna [doc/A_minimal.md](doc/A_minimal.md)
+* Zasilanie bateryjne, czujniki analogowe
+* W przygotowaniu
 
 ## Arduino Pro Mini
 Platforma współpracuje z modułami [Arduino Pro Mini](https://github.com/sparkfun/Arduino_Pro_Mini_328) lub ich klonami w obu wariantach (3.3V/8MHz i 5V/16MHz).
@@ -54,40 +72,48 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6.
 |JP1|LED RN||
 
 # Lista elementów
-W kolumnach A,B,C ... zaznaczone zostały elementy wymagane (+) oraz opcjonalne (\*) dla specyficznej wersji urządzenia
+W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich konfiguracji urządzenia:
+* A - Zasilanie z portu USB
+* B - Zasilanie bateriami o napięciu do **3V**
+* C - Zasilanie bateriami litowymi nie ładowalnymi o napięciu **3,6V**
+* D - Zasilanie akumulatorami li-Ion oraz li-Pol o napięciu **3,6V**
 
-* A - wersja minimalna [doc/A_minimal.md](doc/A_minimal.md)
-* B - zasilanie bateryjne, czujniki analogowe
-* C - nazwa wersji
-
-| Nazwa | Element | Ilość | Uwagi |A|B|
-|-------|---------|-------|-------|-|-|
-|Moduł micro USB| |1| |\*| |
-|uchwyt baterii AA|KEYSTONE 2915|2|| |+|
-|BAT,SOLAR|JST-PH 2pin 2mm|2|| | | |
-|C1,C4|4,7μF MLCC 1206|2|| | |
-|C2|100nF MLCC 1206|1|| |+|
-|C3|22uF 6,3V Tantalum CASE:A|1|| |+|
-|D1,D2,D3|SMD 1206|3|diody LED (LED,VCC,CHR)| | |
-|J1|Wurth Elektronik 629105136821 Micro Usb|1|| |\*|
-|J2|U.FL 50R|1|gniazdo antenowe| |\*|
-|J3|WR-PHD 2.54 mm SMT Pin Header 61000418221|1|interfejs szeregowy| | |
-|J4|WR-PHD 2.54 mm SMT Dual Pin Header 61000821121|1|interfejs I2C| | |
-|Q1|BC817 SOT-23|1|| | | |
-|Q2|YJL2301F SOT-23|1|| | |
-|R11|51R SMD 1206|1|| | |
-|R10|470R SMD 1206|1|| | |
-|R4,R8,R9|1k SMD 1206|3|| |
-|R1|4k SMD 1206|1|| | |
-|R2,R3,R7,R12|10k SMD 1206|4|| | |
-|R6|33k SMD 1206|1|| |+|
-|R5|100k SMD 1206|1|| |+|
-|SW1|Slide Switch 1P2T os102011ma1qn1|1|włącznik zasilania| | |
-|U1|RFM95W|1|**dotyczy tylko wersji z RFM95W**|+|+|
-|U2|TS2940-3.3 SOT-223|1|regulator napięcia LDO| |+|
-|U3|MCP73831-2-OT|1|kontroler ładowania baterii Li-Po/Li-Ion| | |
-|U4|RN2483A|1|**dotyczy tylko wersji z RN2483A**| | |
-|U5|Arduino Pro Mini|1||+|+|
+| Nazwa | Element | Ilość |A|B|C|D| Sekcja |
+|-------|---------|-------|-|-|-|-|--------|
+|U5|Arduino Pro Mini|1|+|+|+|+| |
+|U1|RFM95W **dotyczy tylko wersji z RFM95W**|1||+|+|+|+|RFM9W|
+|U4|RN2483A **dotyczy tylko wersji z RN2483A**|1|+|+|+|+|RN2483A|
+|R11|51R SMD 1206 **dotyczy tylko wersji z RN2483A**|1|+|+|+|+|RN2483A|
+|R12|10k SMD 1206 **dotyczy tylko wersji z RN2483A**|1|+|+|+|+|RN2483A|
+|J2|U.FL gniazdo antenowe|1|\*|\*|\*|\*|RFM95W i RN2483A|
+|U2|TS2940-3.3 SOT-223 regulator napięcia LDO|1|+| |\*|\*|Zasilanie|
+|C2|100nF MLCC 1206|1|+| |\*|\*|Zasilanie|
+|C3|22uF 6,3V Tantalum CASE:A|1|+| |\*|\*|Zasilanie|
+|SW1|Switch 1P2T os102011ma1qn1 włącznik zasilania|1|\*|\*|\*|\*|Zasilanie|
+|J1|Wurth Elektronik 629105136821 Micro Usb|1|+| | |\*|Zasilanie i Ładowarka|
+|bateria AA|KEYSTONE 2915|2|\*|\*|\*|\*|Zasilanie i Ładowarka|
+|BAT|JST-PH 2pin 2mm|1|\*|\*|\*|\*|Zasilanie i Ładowarka|
+|U3|MCP73831-2-OT kontroler ładowania|1|\*| | |\*|Ładowarka|
+|C1|4,7μF MLCC 1206|1|\*| | |\*|Ładowarka|
+|C4|4,7μF MLCC 1206|1|\*| | |\*|Ładowarka|
+|R1|4k SMD 1206|1|\*| | |\*|Ładowarka|
+|SOLAR|JST-PH 2pin 2mm|1|\*| | |\*|Ładowarka|
+|R6|33k SMD 1206|1| | |\*|\*|Pomiar napięcia baterii|
+|R5|100k SMD 1206|1| | |\*|\*|Pomiar napięcia baterii|
+|D1|LED SMD 1206 LED|1|\*|\*|\*|\*|Diody LED|
+|D2|LED SMD 1206 VCC|1|\*|\*|\*|\*|Diody LED|
+|D3|LED SMD 1206 CHR|1|\*|\*|\*|\*|Diody LED|
+|R8|1k SMD 1206|1|\*|\*|\*|\*|Diody LED|
+|R9|1k SMD 1206|1|\*|\*|\*|\*|Diody LED|
+|R10|470R SMD 1206|1|\*|\*|\*|\*|Diody LED|
+|J3|WR-PHD 2.54 mm SMT Pin Header 61000418221 UART|1|\*|\*|\*|\*|Interfejsy komunikacyjne|
+|J4|WR-PHD 2.54 mm SMT Dual Pin Header 61000821121 I2C|1|\*|\*|\*|\*|Interfejsy komunikacyjne|
+|R2|10k SMD 1206|1|\*|\*|\*|\*|Interfejsy komunikacyjne|
+|R3|10k SMD 1206|1|\*|\*|\*|\*|Interfejsy komunikacyjne|
+|Q1|BC817 SOT-23 Tranzystor NPN|1|\*| |\*|\*|Zasilanie układów zew.|
+|Q2|YJL2301F SOT-23 Tranzystor MOSFET|1|\*| |\*|\*|Zasilanie układów zew.|
+|R7|10k SMD 1206|1|\*| |\*|\*|Zasilanie układów zew.|
+|R4|1k SMD 1206|1|\*| |\*|\*|Zasilanie układów zew.|
 
 # Uwagi
 W schemacie została wprowadzona zmiana elementu **Q2** na **YJL2301F** oraz jego połączeniu. 
