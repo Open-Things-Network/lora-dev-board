@@ -4,13 +4,13 @@
 
 # Opis płytki
 Możliwe warianty konfiguracji:
-* Arduino Pro Mini i RFM95W 
-* Arduino Pro Mini i RN2483A
-* tylko RN2483A
+1. Arduino Pro Mini i RFM95W 
+2. Arduino Pro Mini i RN2483A
+3. RN2483A
 
 ## Arduino Pro Mini
 Platforma współpracuje z modułami [Arduino Pro Mini](https://github.com/sparkfun/Arduino_Pro_Mini_328) lub ich klonami w obu wariantach (3.3V/8MHz i 5V/16MHz).
-> Do programowania potrzebny jest konwerter USB/Serial.
+> **UWAGA!** Do programowania potrzebny jest konwerter USB/Serial.
 
 ## Interfejs LoRaWAN
 Płytka pozwala na realizację interfejsu LoRaWAN na dwa różne sposoby:
@@ -32,30 +32,44 @@ Zastosowany kontroler ładowania akumulatorów litowo-polimerowych (Li-Po) i lit
 
 ## Interfejsy komunikacyjne
 Do podłączenia zewnętrznych czujników dostępne są interfejsy:
-* I2C wyprowadzony bezpośrednio z Arduino Pro Mini
+* I2C wyprowadzony bezpośrednio z Arduino Pro Mini (istnieje możliwość zastosowania rezystorów podciągających R2 i R3)
 * port szeregowy obsługiwany programowo (z wykorzystaniem biblioteki `SoftwareSerial`) na pinach 8 (RX) i 9 (TX) Arduino Pro Mini.
 
 ## Pomiar napięcia baterii
 Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6.
 
+## Sterowanie zasilaniem układów zewnętrznych
+
+## Zworki
+|Nazwa|Przeznaczenie|
+|PWR ON (JP4)||
+|VCC/VBAT (JP2)||
+|OUT VBAT/VCC (JP9)||
+|DIO2/D6 (JP3)||
+|SCL (JP7)||
+|SDA (JP8)||
+|RX (JP5)||
+|TX (JP6)||
+|LED RN (JP1)||
+
+# Lista elementów
 W kolumnach A,B,C ... zaznaczone zostały elementy wymagane (+) oraz opcjonalne (\*) dla specyficznej wersji urządzenia
 
 * A - wersja minimalna [doc/A_minimal.md](doc/A_minimal.md)
 * B - zasilanie bateryjne, czujniki analogowe
 * C - nazwa wersji
 
-# Lista elementów
 | Nazwa | Element | Ilość | Uwagi |A|B|
 |-------|---------|-------|-------|-|-|
-|Moduł micro USB| |1| |*| |
+|Moduł micro USB| |1| |\*| |
 |uchwyt baterii AA|KEYSTONE 2915|2|| |+|
 |BAT,SOLAR|JST-PH 2pin 2mm|2|| | | |
 |C1,C4|4,7μF MLCC 1206|2|| | |
 |C2|100nF MLCC 1206|1|| |+|
 |C3|22uF 6,3V Tantalum CASE:A|1|| |+|
 |D1,D2,D3|SMD 1206|3|diody LED (LED,VCC,CHR)| | |
-|J1|Wurth Elektronik 629105136821 Micro Usb|1|| |*|
-|J2|U.FL 50R|1|gniazdo antenowe| |*|
+|J1|Wurth Elektronik 629105136821 Micro Usb|1|| |\*|
+|J2|U.FL 50R|1|gniazdo antenowe| |\*|
 |J3|WR-PHD 2.54 mm SMT Pin Header 61000418221|1|interfejs szeregowy| | |
 |J4|WR-PHD 2.54 mm SMT Dual Pin Header 61000821121|1|interfejs I2C| | |
 |Q1|BC817 SOT-23|1|| | | |
