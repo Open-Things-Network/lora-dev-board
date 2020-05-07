@@ -6,11 +6,11 @@ stabilizator napięcia wbidowany w Arduino Pro Mini, można pominąć montaż na
 
 ## Wymagane elementy
 
-| Nazwa | Element | Ilość | Uwagi |A|B|
-|-------|---------|-------|-------|-|-|
-|Moduł micro USB| |1| |*| |
-|U1|RFM95W|1|**dotyczy tylko wersji z RFM95W**|+|+|
-|U5|Arduino Pro Mini|1||+|+|
+| Nazwa | Element | Ilość | Uwagi |
+|-------|---------|-------|-------|
+|Moduł micro USB| |1| |
+|U1|RFM95W|1||
+|U5|Arduino Pro Mini|1||
 
 ## Lista czynności
 
