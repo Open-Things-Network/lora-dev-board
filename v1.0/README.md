@@ -82,11 +82,11 @@ W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) 
 | Nazwa | Element |A|B|C|D| Sekcja |
 |-------|---------|-|-|-|-|--------|
 |U5|Arduino Pro Mini|+|+|+|+| |
-|U1|RFM95W **dotyczy tylko wersji z RFM95W**|+|+|+|+|RFM9W|
-|U4|RN2483A **dotyczy tylko wersji z RN2483A**|+|+|+|+|RN2483A|
-|R11|51R SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|RN2483A|
-|R12|10k SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|RN2483A|
-|J2|U.FL gniazdo antenowe|\*|\*|\*|\*|RFM95W i RN2483A|
+|U1|RFM95W **dotyczy tylko wersji z RFM95W**|+|+|+|+|LoRa|
+|U4|RN2483A **dotyczy tylko wersji z RN2483A**|+|+|+|+|LoRa|
+|R11|51R SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|LoRa|
+|R12|10k SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|LoRa|
+|J2|U.FL gniazdo antenowe|\*|\*|\*|\*|LoRa|
 |U2|TS2940-3.3 SOT-223 regulator napięcia LDO|+| |\*|\*|Zasilanie|
 |C2|100nF MLCC 1206|+| |\*|\*|Zasilanie|
 |C3|22uF 6,3V Tantalum CASE:A|+| |\*|\*|Zasilanie|
