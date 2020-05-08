@@ -42,7 +42,7 @@ Zastosowany kontroler ładowania akumulatorów litowo-polimerowych (Li-Po) i lit
 
 ## Diody LED
 |Oznaczenie|Opis|
-|----------|----|
+|:--------:|:---|
 |LED|dioda do ogólnego zastosowania w aplikacji użytkownika (`USER_LED`)|
 |VCC|sygnalizuje obecność napięcia zasilania|
 |CHR|sygnalizuje ładowanie podłączonej baterii Li-Po/Li-Ion|
@@ -59,7 +59,7 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6 (makro `VBAT`).
 
 ## Zworki
 |Symbol|Nazwa|Przeznaczenie|
-|------|-----|-------------|
+|:----:|:---:|:------------|
 |JP4|PWR ON|Pozwala na ominięcie mechanicznego włącznika zasilania SW1 (zasilanie zawsze włączone)|
 |JP2|VCC/VBAT|Pozwala na ominięcie regulatora napięcia LDO i bezpośrednie podanie napięcia z baterii na VCC Arduino|
 |JP9|OUT VBAT/VCC|Wybór źródła zasilania układów zewnętrznych - bateria lub regulator napięcia)|
@@ -78,7 +78,7 @@ W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) 
 * D - Zasilanie akumulatorami Li-Ion oraz Li-Po o napięciu **3.7V**
 
 | Nazwa | Element |A|B|C|D| Sekcja |
-|-------|---------|-|-|-|-|--------|
+|:-----:|:--------|-|-|-|-|--------|
 |U5|Arduino Pro Mini|+|+|+|+| |
 |U1|RFM95W **dotyczy tylko wersji z RFM95W**|+|+|+|+|LoRa|
 |U4|RN2483A **dotyczy tylko wersji z RN2483A**|+|+|+|+|LoRa|
