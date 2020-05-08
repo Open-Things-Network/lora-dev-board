@@ -55,29 +55,29 @@ Do podłączenia zewnętrznych czujników dostępne są interfejsy:
 * port szeregowy obsługiwany programowo (z wykorzystaniem biblioteki `SoftwareSerial`) na pinach 8 (RX) i 9 (TX) Arduino Pro Mini.
 
 ## Pomiar napięcia baterii
-Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6.
+Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6 (makro `VBAT`).
 
 ## Sterowanie zasilaniem układów zewnętrznych
 
 ## Zworki
 |Symbol|Nazwa|Przeznaczenie|
 |------|-----|-------------|
-|JP4|PWR ON|Zawsze włączone (ominięcie mechanicznego włącznika)|
-|JP2|VCC/VBAT|Zwarcie spowoduje bezpośrednie podanie napięcia z złącz baterii na VCC Arduino|
-|JP9|OUT VBAT/VCC|Napięcie zasilania układów zewnętrznych|
-|JP3|DIO2/D6|Zwarcie DIO2: Dodatkowe sterowanie **RFM95W**; Zwarcie D6: Dodatkowe wyjście/wyjście na zewnątrz|
-|JP7|SCL|Tylko z wykorzystaniem **RN2483A** bez Arduino|
-|JP8|SDA|Tylko z wykorzystaniem **RN2483A** bez Arduino|
-|JP5|RX|Tylko z wykorzystaniem **RN2483A** bez Arduino|
-|JP6|TX|Tylko z wykorzystaniem **RN2483A** bez Arduino|
-|JP1|LED RN|Tylko z wykorzystaniem **RN2483A** bez Arduino|
+|JP4|PWR ON|Pozwala na ominięcie mechanicznego włącznika zasilania SW1 (zasilanie zawsze włączone)|
+|JP2|VCC/VBAT|Pozwala na ominięcie regulatora napięcia LDO i bezpośrednie podanie napięcia z baterii na VCC Arduino|
+|JP9|OUT VBAT/VCC|Wybór źródła zasilania układów zewnętrznych - bateria lub regulator napięcia)|
+|JP3|DIO2/D6|Sposób wykorzystania pinu 6 Arduino (jako DIO2 do transceivera w **RFM95W** lub wejście/wyjście ogólnego przeznaczenia)|
+|JP7|SCL|Pozwala na wykorzystanie interfejsu I2C modułu **RN2483A** poprzez złącze J4 (tylko w wariancie konfiguracji 3)|
+|JP8|SDA|Pozwala na wykorzystanie interfejsu I2C modułu **RN2483A** poprzez złącze J4 (tylko w wariancie konfiguracji 3)|
+|JP5|RX|Pozwala na wykorzystanie portu szeregowego modułu **RN2483A** poprzez złącze J3 (tylko w wariancie konfiguracji 3)|
+|JP6|TX|Pozwala na wykorzystanie portu szeregowego modułu **RN2483A** poprzez złącze J3 (tylko w wariancie konfiguracji 3)|
+|JP1|LED RN|Pozwala na wykorzystanie diody LED z poziomu oprogramowania modułu **RN2483A** (tylko w wariancie konfiguracji 3)|
 
 # Lista elementów
-W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich konfiguracji urządzenia:
+W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich wariantów zasilania urządzenia:
 * A - Zasilanie z portu USB
-* B - Zasilanie bateriami o napięciu do **3V**
-* C - Zasilanie bateriami litowymi nie ładowalnymi o napięciu **3,6V**
-* D - Zasilanie akumulatorami li-Ion oraz li-Pol o napięciu **3,6V**
+* B - Zasilanie bateriami o napięciu do **3V** (np. baterie alkaliczne lub litowe - guzikowe)
+* C - Zasilanie bateriami litowymi nieładowalnymi o napięciu **3.6V**
+* D - Zasilanie akumulatorami Li-Ion oraz Li-Po o napięciu **3.7V**
 
 | Nazwa | Element |A|B|C|D| Sekcja |
 |-------|---------|-|-|-|-|--------|
