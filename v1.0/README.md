@@ -4,7 +4,7 @@
 
 # Spis treści:
 1. [Opis płytki](#Opis-płytki)
-2. [Arduino Pro Mini](#Arduino-Pro_Mini)
+2. [Arduino Pro Mini](#Arduino-Pro-Mini)
 3. [Interfejs LoRaWAN](#Interfejs-LoRaWAN)
 4. [Układ zasilania](#Układ-zasilania)
 5. [Układ ładowania](#Układ-ładowania)
@@ -24,8 +24,6 @@ Możliwe warianty konfiguracji:
 
 Szczegółowe instrukcje dla wersji montażowych:
 * Wersja minimalna [doc/A_minimal.md](doc/A_minimal.md)
-* Zasilanie bateryjne, czujniki analogowe
-* W przygotowaniu
 
 ## Arduino Pro Mini
 Platforma współpracuje z modułami [Arduino Pro Mini](https://github.com/sparkfun/Arduino_Pro_Mini_328) lub ich klonami w obu wariantach (3.3V/8MHz i 5V/16MHz).
@@ -66,11 +64,11 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6 (makro `VBAT`).
 |JP2|VCC/VBAT|Pozwala na ominięcie regulatora napięcia LDO i bezpośrednie podanie napięcia z baterii na VCC Arduino|
 |JP9|OUT VBAT/VCC|Wybór źródła zasilania układów zewnętrznych - bateria lub regulator napięcia)|
 |JP3|DIO2/D6|Sposób wykorzystania pinu 6 Arduino (jako DIO2 do transceivera w **RFM95W** lub wejście/wyjście ogólnego przeznaczenia)|
-|JP7|SCL|Pozwala na wykorzystanie interfejsu I2C modułu **RN2483A** poprzez złącze J4 (tylko w wariancie konfiguracji 3)|
-|JP8|SDA|Pozwala na wykorzystanie interfejsu I2C modułu **RN2483A** poprzez złącze J4 (tylko w wariancie konfiguracji 3)|
-|JP5|RX|Pozwala na wykorzystanie portu szeregowego modułu **RN2483A** poprzez złącze J3 (tylko w wariancie konfiguracji 3)|
-|JP6|TX|Pozwala na wykorzystanie portu szeregowego modułu **RN2483A** poprzez złącze J3 (tylko w wariancie konfiguracji 3)|
-|JP1|LED RN|Pozwala na wykorzystanie diody LED z poziomu oprogramowania modułu **RN2483A** (tylko w wariancie konfiguracji 3)|
+|JP7|SCL|Pozwala na wykorzystanie interfejsu I2C modułu **RN2483A** poprzez złącze J4 (dotyczy tylko wariantu 3)|
+|JP8|SDA|Pozwala na wykorzystanie interfejsu I2C modułu **RN2483A** poprzez złącze J4 (dotyczy tylko wariantu 3)|
+|JP5|RX|Pozwala na wykorzystanie portu szeregowego modułu **RN2483A** poprzez złącze J3 (dotyczy tylko wariantu 3)|
+|JP6|TX|Pozwala na wykorzystanie portu szeregowego modułu **RN2483A** poprzez złącze J3 (dotyczy tylko wariantu 3)|
+|JP1|LED RN|Pozwala na wykorzystanie diody LED z poziomu oprogramowania modułu **RN2483A** (dotyczy tylko wariantu 3)|
 
 # Lista elementów
 W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich wariantów zasilania urządzenia:
