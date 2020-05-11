@@ -19,7 +19,7 @@ stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na
 
 1. Zamówienie PCB
 2. Podłączenie Arduino Pro Mini
-3. Podłączenie RFM95W
+3. Podłączenie RFM95W i anteny
 4. Wgrywanie oprogramowania
 5. Uruchomienie
 
@@ -31,11 +31,13 @@ DO UZUPEŁNIENIA
 
 Wykorzystane gniazda i listwy typu goldpin
 
-![Gniazda](IMG_20200511_234213.jpg)
+![Gniazda](../Media/devboard_A_1.jpg)
 
 Arduino z wlutowanymi goldpinami
 
-### Podłączenie RFM95W
+![Arduino](../Media/devboard_A_2.jpg)
+
+### Podłączenie RFM95W i anteny
 
 DO UZUPEŁNIENIA
 
