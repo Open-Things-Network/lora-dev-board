@@ -21,7 +21,7 @@ stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na
 2. Podłączenie Arduino Pro Mini
 3. Podłączenie RFM95W i anteny
 4. Wgrywanie oprogramowania
-5. Uruchomienie
+5. Podłączenie zasilania i uruchomienie
 
 ### Zamówienie PCB
 
@@ -45,7 +45,7 @@ DO UZUPEŁNIENIA
 
 DO UZUPEŁNIENIA
 
-### Uruchomienie
+### Podłączenie zasilania i uruchomienie
 
 Do gotowego urządzenia podłaczamy zasilacz USB 5V, korzystając z Modułu Micro USB podłączonego do Arduino jak na ilustracji poniżej.
 
