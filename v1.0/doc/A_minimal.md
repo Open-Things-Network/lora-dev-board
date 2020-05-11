@@ -31,6 +31,8 @@ DO UZUPEŁNIENIA
 
 Wykorzystane gniazda i listwy typu goldpin
 
+![Gnniazda](https://github.com/Open-Things-Network/lora-dev-board/v1.0/doc/IMG_20200511_234213.jpg)
+
 Arduino z wlutowanymi goldpinami
 
 ### Podłączenie RFM95W
