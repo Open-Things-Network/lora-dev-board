@@ -18,25 +18,20 @@ stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na
 ## Lista czynności
 
 1. Zamówienie PCB
-2. Modyfikacja PCB
-3. Podłączenie Arduino Pro Mini
-4. Podłączenie RFM95W
-5. Wgrywanie oprogramowania
-6. Uruchomienie
+2. Podłączenie Arduino Pro Mini
+3. Podłączenie RFM95W
+4. Wgrywanie oprogramowania
+5. Uruchomienie
 
 ### Zamówienie PCB
 
 DO UZUPEŁNIENIA
 
-### Modyfikacja PCB
-
->**UWAGA!** Opisywana modyfikacja jest wymagana **jedynie dla wersji minimalnej**, w której napięcie zasilające pozostałe elementy jest brane z wyjścia 3.3V stabilizatora Arduino. 
-
-DO UZUPEŁNIENIA
-
 ### Podłączenie Arduino Pro Mini
 
-DO UZUPEŁNIENIA
+Wykorzystane gniazda i listwy typu goldpin
+
+Arduino z wlutowanymi goldpinami
 
 ### Podłączenie RFM95W
 
