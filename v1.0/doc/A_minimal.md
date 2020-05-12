@@ -39,7 +39,9 @@ Arduino z wlutowanymi goldpinami
 
 ### Podłączenie RFM95W i anteny
 
-DO UZUPEŁNIENIA
+Płytka z przylutowanym modułem RFM95 i anteną helikalną. Antena wykonana zgodnie z opisem zamiesczonym na blogu http://e.pavlin.si/2018/06/29/small-normal-mode-antenna-for-868mhz/ (powyżej płytki przewód do płytki stykowej wykorzystany do zrobienia anteny).
+
+![RFM95 i antena](../Media/devboard_A_3.jpg)
 
 ### Wgrywanie oprogramowania
 
