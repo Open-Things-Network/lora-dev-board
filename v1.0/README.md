@@ -85,26 +85,26 @@ W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) 
 |R11|51R SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|LoRa|
 |R12|10k SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|LoRa|
 |J2|U.FL gniazdo antenowe|\*|\*|\*|\*|LoRa|
-|U2|TS2940-3.3 SOT-223 regulator napięcia LDO|+| |\*|\*|Zasilanie|
-|C2|100nF MLCC 1206|+| |\*|\*|Zasilanie|
-|C3|22uF 6,3V Tantalum CASE:A|+| |\*|\*|Zasilanie|
+|U2|TS2940-3.3 SOT-223 regulator napięcia LDO|+| |+|+|Zasilanie|
+|C2|100nF MLCC 1206|+| |+|+|Zasilanie|
+|C3|22uF 6,3V Tantalum CASE:A|+| |+|+|Zasilanie|
 |SW1|Switch 1P2T os102011ma1qn1 włącznik zasilania|\*|\*|\*|\*|Zasilanie|
-|J1|Wurth Elektronik 629105136821 Micro Usb|+| | |\*|Zasilanie i Ładowarka|
-|bateria AA|KEYSTONE 2915 **wymagne dwie sztuki na płytkę**|\*|\*|\*|\*|Zasilanie i Ładowarka|
-|BAT|JST-PH 2pin 2mm|\*|\*|\*|\*|Zasilanie i Ładowarka|
-|U3|MCP73831-2-OT kontroler ładowania|\*| | |\*|Ładowarka|
-|C1|4,7μF MLCC 1206|\*| | |\*|Ładowarka|
-|C4|4,7μF MLCC 1206|\*| | |\*|Ładowarka|
-|R1|4k SMD 1206|\*| | |\*|Ładowarka|
-|SOLAR|JST-PH 2pin 2mm|\*| | |\*|Ładowarka|
-|R6|33k SMD 1206| | |\*|\*|Pomiar napięcia baterii|
-|R5|100k SMD 1206| | |\*|\*|Pomiar napięcia baterii|
+|J1|Wurth Elektronik 629105136821 Micro Usb|+| | |+|Zasilanie i Ładowarka|
+|bateria AA|KEYSTONE 2915 **wymagne dwie sztuki na płytkę**| | |\*|\*|Zasilanie i Ładowarka|
+|BAT|JST-PH 2pin 2mm| |+|\*|\*|Zasilanie i Ładowarka|
+|U3|MCP73831-2-OT kontroler ładowania| | | |+|Ładowarka|
+|C1|4,7μF MLCC 1206| | | |+|Ładowarka|
+|C4|4,7μF MLCC 1206| | | |+|Ładowarka|
+|R1|4k SMD 1206| | | |+|Ładowarka|
+|SOLAR|JST-PH 2pin 2mm| | | |\*|Ładowarka|
+|R6|33k SMD 1206| |+|+|+|Pomiar napięcia baterii|
+|R5|100k SMD 1206| |+|+|+|Pomiar napięcia baterii|
 |D1|LED SMD 1206 LED|\*|\*|\*|\*|Diody LED|
-|D2|LED SMD 1206 VCC|\*|\*|\*|\*|Diody LED|
-|D3|LED SMD 1206 CHR|\*|\*|\*|\*|Diody LED|
-|R8|1k SMD 1206|\*|\*|\*|\*|Diody LED|
+|D2|LED SMD 1206 VCC|+|+|+|+|Diody LED|
+|D3|LED SMD 1206 CHR| | | |+|Diody LED|
+|R8|1k SMD 1206|+|+|+|+|Diody LED|
 |R9|1k SMD 1206|\*|\*|\*|\*|Diody LED|
-|R10|470R SMD 1206|\*|\*|\*|\*|Diody LED|
+|R10|470R SMD 1206| | | |+|Diody LED|
 |J3|WR-PHD 2.54 mm SMT Pin Header 61000418221 UART|\*|\*|\*|\*|Interfejsy komunikacyjne|
 |J4|WR-PHD 2.54 mm SMT Dual Pin Header 61000821121 I2C|\*|\*|\*|\*|Interfejsy komunikacyjne|
 |R2|10k SMD 1206|\*|\*|\*|\*|Interfejsy komunikacyjne|
