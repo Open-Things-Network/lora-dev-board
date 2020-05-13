@@ -64,7 +64,10 @@ Sposób połączenia pinów konwertera z pinami Arduino pokazany w tabeli poniż
 
 >**Uwaga! Należy pamiętać o odpowiednim ustawienie na FT232 zworki 3.3v/5V - zgodnie z wersją Arduino**
 
+![Podłączenie konwertera](../Media/devboard_A_4.jpg)
+
 DO UZUPEŁNIENIA
+
 
 ### Podłączenie zasilania i uruchomienie
 
