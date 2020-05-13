@@ -43,7 +43,26 @@ Płytka z przylutowanym modułem RFM95 i anteną helikalną. Antena wykonana zgo
 
 ![RFM95 i antena](../Media/devboard_A_3.jpg)
 
+### Kompilacja programu
+
+DO OPISANIA
+
 ### Wgrywanie oprogramowania
+
+Do wgrania skompilowanego programu na Arduino konieczne będzie podłączenie go z wykorzystaniem konwertera USB-UART.
+
+Sposób połączenia pinów konwertera z pinami Arduino pokazany w tabeli poniżej (DO UZUPEŁNIENIA)
+
+|Adruino Pro Mini|FT232|
+|---|---|
+|BLK|GND|
+|GND|CTS#|
+|VCC|VCC|
+|RXI|TXD|
+|TXD|RXD|
+|GNR|RTX#|
+
+>**Uwaga! Należy pamiętać o odpowiednim ustawienie na FT232 zworki 3.3v/5V - zgodnie z wersją Arduino**
 
 DO UZUPEŁNIENIA
 
