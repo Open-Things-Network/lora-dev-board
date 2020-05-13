@@ -51,16 +51,16 @@ DO OPISANIA
 
 Do wgrania skompilowanego programu na Arduino konieczne będzie podłączenie go z wykorzystaniem konwertera USB-UART.
 
-Sposób połączenia pinów konwertera z pinami Arduino pokazany w tabeli poniżej (DO UZUPEŁNIENIA)
+Sposób połączenia pinów konwertera z pinami Arduino pokazany w tabeli poniżej (w nawiasach alternatywne oznaczenia, które można spotkać na niektórych konwerterach). Nie należy sugerować się na kolejnością w tabeli, tylko sprawdzić napisy na płytkach - nowsze wersje Arduino Pro Mini mają odwrotną kolejność pinów niż starsze.
 
 |Adruino Pro Mini|FT232|
 |---|---|
 |BLK|GND|
-|GND|CTS#|
+|GND|CTS (CTS#)|
 |VCC|VCC|
 |RXI|TXD|
 |TXD|RXD|
-|GNR|RTX#|
+|GNR|DTR (RTX#)|
 
 >**Uwaga! Należy pamiętać o odpowiednim ustawienie na FT232 zworki 3.3v/5V - zgodnie z wersją Arduino**
 
