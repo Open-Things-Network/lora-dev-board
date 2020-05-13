@@ -76,7 +76,8 @@ W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) 
 * B - Zasilanie bateriami o napięciu do **3V** (np. baterie alkaliczne lub litowe - guzikowe)
 * C - Zasilanie bateriami litowymi nieładowalnymi o napięciu **3.6V**
 * D - Zasilanie akumulatorami Li-Ion oraz Li-Po o napięciu **3.7V**
-* M - Wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - zasilanie podpięte bezpośrednio do Arduino Pro Mini
+* M - Wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - wykorzystanie stabilizatora napięcia z Arduino Pro Mini
+> **UWAGA!** W wersji minimalnej można zastosować tylko Arduino Pro Mini 3.3V/8MHz ze względu na maksymalne napięcie zasilania modułów RFM95W lub RN2483A.
 
 | Nazwa | Element |A|B|C|D|M| Sekcja |
 |:-----:|:--------|-|-|-|-|-|--------|
