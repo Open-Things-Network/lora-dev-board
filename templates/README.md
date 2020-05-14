@@ -9,7 +9,7 @@ Dostępne wersje szablonów:
 ## Wymagania związane z oprogramowaniem
 Wykorzystane biblioteki:
 * [Arduino-LMIC Library](https://github.com/matthijskooijman/arduino-lmic)
-* [Low-Power](https://github.com/rocketscream/Low-Power)
+* [Low Power Library for Arduino](https://github.com/rocketscream/Low-Power)
 * [Cayenne LPP](https://github.com/ElectronicCats/CayenneLPP) lub [The Things Network Arduino Library](https://github.com/TheThingsNetwork/arduino-device-lib), która zawiera CayenneLPP i jest również używana do komunikacji z RN2483A
 
 ## Komunikacja LoRaWAN
