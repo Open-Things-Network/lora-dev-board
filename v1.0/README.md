@@ -76,23 +76,23 @@ W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) 
 * B - Zasilanie bateriami o napięciu do **3V** (np. baterie alkaliczne lub litowe - guzikowe)
 * C - Zasilanie bateriami litowymi nieładowalnymi o napięciu **3.6V**
 * D - Zasilanie akumulatorami Li-Ion oraz Li-Po o napięciu **3.7V**
-* M - Wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - wykorzystanie stabilizatora napięcia z Arduino Pro Mini
-> **UWAGA!** W wersji minimalnej można zastosować tylko Arduino Pro Mini 3.3V/8MHz ze względu na maksymalne napięcie zasilania modułów RFM95W lub RN2483A.
+* M - Wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - zasilanie zewnętrzne z opcją wykorzystania stabilizatora napięcia z Arduino Pro Mini
+> **UWAGA!** W wersji minimalnej jest możliwość wykorzystania stabilizatora napięcia z Arduino Pro Mini poprzez podłączenie zasilana do pinu RAW zamiast VCC. W takim przypadku **należy stosować tylko Arduino Pro Mini 3.3V** ze względu na dopuszczalne napięcie zasilania modułów RFM95W lub RN2483A.
 
 | Nazwa | Element |A|B|C|D|M| Sekcja |
 |:-----:|:--------|-|-|-|-|-|--------|
 |U5|Arduino Pro Mini|+|+|+|+|+| |
-|U1|RFM95W **dotyczy tylko wersji z RFM95W**|+|+|+|+|+|LoRa|
-|U4|RN2483A **dotyczy tylko wersji z RN2483A**|+|+|+|+|+|LoRa|
-|R11|51R SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|+|LoRa|
-|R12|10k SMD 1206 **dotyczy tylko wersji z RN2483A**|+|+|+|+|+|LoRa|
+|U1|RFM95W (**dotyczy tylko wersji z RFM95W**)|+|+|+|+|+|LoRa|
+|U4|RN2483A (**dotyczy tylko wersji z RN2483A**)|+|+|+|+|+|LoRa|
+|R11|51R SMD 1206 (**dotyczy tylko wersji z RN2483A**)|+|+|+|+|+|LoRa|
+|R12|10k SMD 1206 (**dotyczy tylko wersji z RN2483A**)|+|+|+|+|+|LoRa|
 |J2|U.FL gniazdo antenowe|\*|\*|\*|\*|\*|LoRa|
 |U2|TS2940-3.3 SOT-223 regulator napięcia LDO|+| |+|+| |Zasilanie|
 |C2|100nF MLCC 1206|+| |+|+| |Zasilanie|
 |C3|22uF 6,3V Tantalum CASE:A|+| |+|+| |Zasilanie|
-|SW1|Switch 1P2T os102011ma1qn1 włącznik zasilania|\*|\*|\*|\*| |Zasilanie|
+|SW1|Switch 1P2T os102011ma1qn1 (włącznik zasilania)|\*|\*|\*|\*| |Zasilanie|
 |J1|Wurth Elektronik 629105136821 Micro Usb|+| | |+| |Zasilanie i Ładowarka|
-|bateria AA|KEYSTONE 2915 **wymagne dwie sztuki na płytkę**| | |\*|\*| |Zasilanie i Ładowarka|
+|bateria AA|KEYSTONE 2915 (**wymagne dwie sztuki na płytkę**)| | |\*|\*| |Zasilanie i Ładowarka|
 |BAT|JST-PH 2pin 2mm| |+|\*|\*| |Zasilanie i Ładowarka|
 |U3|MCP73831-2-OT kontroler ładowania| | | |+| |Ładowarka|
 |C1|4,7μF MLCC 1206| | | |+| |Ładowarka|
@@ -101,14 +101,14 @@ W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) 
 |SOLAR|JST-PH 2pin 2mm| | | |\*| |Ładowarka|
 |R6|33k SMD 1206| |+|+|+| |Pomiar napięcia baterii|
 |R5|100k SMD 1206| |+|+|+| |Pomiar napięcia baterii|
-|D1|LED SMD 1206 LED|\*|\*|\*|\*| |Diody LED|
-|D2|LED SMD 1206 VCC|+|+|+|+| |Diody LED|
-|D3|LED SMD 1206 CHR| | | |+| |Diody LED|
+|D1|LED SMD 1206 (LED)|\*|\*|\*|\*| |Diody LED|
+|D2|LED SMD 1206 (VCC)|+|+|+|+| |Diody LED|
+|D3|LED SMD 1206 (CHR)| | | |+| |Diody LED|
 |R8|1k SMD 1206|+|+|+|+| |Diody LED|
 |R9|1k SMD 1206|\*|\*|\*|\*| |Diody LED|
 |R10|470R SMD 1206| | | |+| |Diody LED|
-|J3|WR-PHD 2.54 mm SMT Pin Header 61000418221 UART|\*|\*|\*|\*| |Interfejsy komunikacyjne|
-|J4|WR-PHD 2.54 mm SMT Dual Pin Header 61000821121 I2C|\*|\*|\*|\*| |Interfejsy komunikacyjne|
+|J3|WR-PHD 2.54 mm SMT Pin Header 61000418221 (UART)|\*|\*|\*|\*| |Interfejsy komunikacyjne|
+|J4|WR-PHD 2.54 mm SMT Dual Pin Header 61000821121 (I2C)|\*|\*|\*|\*| |Interfejsy komunikacyjne|
 |R2|10k SMD 1206|\*|\*|\*|\*| |Interfejsy komunikacyjne|
 |R3|10k SMD 1206|\*|\*|\*|\*| |Interfejsy komunikacyjne|
 |Q1|BC817 SOT-23 Tranzystor NPN|\*| |\*|\*| |Zasilanie układów zew.|
