@@ -11,7 +11,7 @@ stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na
 |1|Moduł micro USB|1| Umożliwia zastosowanie standardowego zasilacza USB 5V|
 |2|Konwerter USB-UART|1| Konieczny do wgrania oprogramowania do Arduino|
 |3|RFM95W|1| Moduł nadawczo-odbiorczy LoRa 868 MHz|
-|4|Arduino Pro Mini|1||
+|4|Arduino Pro Mini|1| Wersja 3.3V|
 
 
 
@@ -62,7 +62,7 @@ Sposób połączenia pinów konwertera z pinami Arduino pokazany w tabeli poniż
 |TXD|RXD|
 |GNR|DTR (RTX#)|
 
->**Uwaga! Należy pamiętać o odpowiednim ustawienie na FT232 zworki 3.3v/5V - zgodnie z wersją Arduino**
+>**Uwaga! Należy pamiętać o odpowiednim ustawienie na FT232 zworki 3.3v/5V  w pozycji 3.3V - zgodnie z używaną w tym przykładzie wersją Arduino**
 
 ![Podłączenie konwertera](../Media/devboard_A_4.jpg)
 
