@@ -71,13 +71,13 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6 (makro `VBAT`).
 |JP1|LED RN|Pozwala na wykorzystanie diody LED z poziomu oprogramowania modułu **RN2483A** (dotyczy tylko wariantu 3)|
 
 # Lista elementów
-W Kolumnach A,B,C,D zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich wariantów zasilania urządzenia:
-* A - Zasilanie z portu USB
-* B - Zasilanie bateriami o napięciu do **3V** (np. baterie alkaliczne lub litowe - guzikowe)
-* C - Zasilanie bateriami litowymi nieładowalnymi o napięciu **3.6V**
-* D - Zasilanie akumulatorami Li-Ion oraz Li-Po o napięciu **3.7V**
-* M - Wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - zasilanie zewnętrzne z opcją wykorzystania stabilizatora napięcia z Arduino Pro Mini
-> **UWAGA!** W wersji minimalnej jest możliwość wykorzystania stabilizatora napięcia z Arduino Pro Mini poprzez podłączenie zasilana do pinu RAW zamiast VCC. W takim przypadku **należy stosować tylko Arduino Pro Mini 3.3V** ze względu na dopuszczalne napięcie zasilania modułów RFM95W lub RN2483A.
+W kolumnach A, B, C, D i M zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich wariantów zasilania urządzenia:
+* A - zasilanie z portu USB
+* B - zasilanie bateriami o napięciu do **3V** (np. baterie alkaliczne lub litowe - guzikowe)
+* C - zasilanie bateriami litowymi nieładowalnymi o napięciu **3.6V**
+* D - zasilanie akumulatorami Li-Ion oraz Li-Po o napięciu **3.7V**
+* M - wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - zasilanie zewnętrzne 3.3V z opcją wykorzystania stabilizatora napięcia z Arduino Pro Mini
+> **UWAGA!** W wersji minimalnej jest możliwość wykorzystania stabilizatora napięcia z Arduino Pro Mini poprzez podłączenie zasilana do pinu RAW zamiast VCC. W takim przypadku należy stosować **tylko Arduino Pro Mini 3.3V** ze względu na dopuszczalne napięcie zasilania modułów RFM95W lub RN2483A.
 
 | Nazwa | Element |A|B|C|D|M| Sekcja |
 |:-----:|:--------|-|-|-|-|-|--------|
