@@ -71,6 +71,6 @@ DO UZUPEŁNIENIA
 
 ### Podłączenie zasilania i uruchomienie
 
-Do gotowego urządzenia podłaczamy zasilacz USB 5V, korzystając z Modułu Micro USB podłączonego do Arduino jak na ilustracji poniżej.
+Do gotowego urządzenia podłaczamy zasilacz USB 5V, korzystając z Modułu Micro USB podłączonego do Arduino jak na ilustracji poniżej. Przewody z modułu USB wpinamy w gniazda RAW (5V) oraz GND Arduino.
 
-DO UZUPEŁNIENIA
+![Podłączenie zasilacza USB](../Media/devboard_A_5.jpg)
