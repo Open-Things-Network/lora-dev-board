@@ -4,6 +4,8 @@ Wersja minimalna urządzenia jest najłatwiejsza do zbudowania dla początkując
 Wymaga zastosowania zewnętrznego zasilacza USB podłączonego bezpośrednio do Arduino. Ponieważ wykorzystuje 
 stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na płytce dodatkowych komponentów SMD.
 
+> *Do zbudowana wersji minimalnej można użyć płytki w wersji 1.0 lub 1.1*
+
 ## Wymagane elementy
 
 | Nr| Element | Ilość | Uwagi |
@@ -20,8 +22,10 @@ stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na
 1. Zamówienie PCB
 2. Podłączenie Arduino Pro Mini
 3. Podłączenie RFM95W i anteny
-4. Wgrywanie oprogramowania
-5. Podłączenie zasilania i uruchomienie
+4. Rejestracja urządzenia w sieci LoRaWAN The Things Network
+5. Kompilacja programu
+6. Wgrywanie programu
+7. Podłączenie zasilania i uruchomienie
 
 ### Zamówienie PCB
 
@@ -47,14 +51,19 @@ Płytka z przylutowanym modułem RFM95 i anteną helikalną. Antena wykonana zgo
 
 Przed przystąpieniem do kompilowania przykładowego programu i wgraniem go do urządzenia, musimy to urządznie zarejestrować u wybranego dostawcy sieci LoRaWAN - w tym przypadku The Things Network.
 
-Proces rejestracji jest opisanw w wielu miejscach, więc tutaj podsumujmy jedynie, że po zarejestrowaniu urządzenia musimy przypisane mu wartości `Device Address`, `Network Session Key`, oraz `App Session Key` wpisać do kodu naszego przykładowego szablonu:
+Proces rejestracji jest dobrze opisany w [dokumentacji The Things Network](https://www.thethingsnetwork.org/docs/devices/registration.html) - pamiętajmy o wybraniu metody aktywacji ABP. 
+
+### Kompilacja programu
+
+DO UZUPEŁNIENIA
+
+Przypisane urządzeniu w trakcie rejestracji wartości `Device Address`, `Network Session Key`, oraz `App Session Key` należy wpisać do kodu szablonu poniżej linii `// ABP mode - set DevAddr and session keys`:
 
 |Nazwa w Device Settings|Nazwa zmiennej w szablonie|
 |---|---|
 |Device Address|DEVADDR|
 |Network Session Key|NWKSKEY|
 |App Session Key|APPSKEY|
-
 
 ```
 //...
@@ -69,11 +78,7 @@ static const u4_t DEVADDR = 0x2601108E;
 // ...
 ```
 
-### Kompilacja programu
-
-DO OPISANIA
-
-### Wgrywanie oprogramowania
+### Wgrywanie programu (szkicu)
 
 Do wgrania skompilowanego programu na Arduino konieczne będzie podłączenie go z wykorzystaniem konwertera USB-UART.
 
@@ -92,11 +97,12 @@ Sposób połączenia pinów konwertera z pinami Arduino pokazany w tabeli poniż
 
 ![Podłączenie konwertera](../Media/devboard_A_4.jpg)
 
-DO UZUPEŁNIENIA
-
+Z menu Arduino IDE wybieramy opcję `Szkic > Wgraj` i czekamy na wyświetlenie się komunikatu o zakończeniu procesu wgrywania programu do Arduino.
 
 ### Podłączenie zasilania i uruchomienie
 
-Do gotowego urządzenia podłaczamy zasilacz USB 5V, korzystając z Modułu Micro USB podłączonego do Arduino jak na ilustracji poniżej. Przewody z modułu USB wpinamy w gniazda RAW (5V) oraz GND Arduino.
+Jeśli kompilacja i wgranie programu zakończyło się bez błedu, możemy odłączyć konwerter USB-UART od Arduino.
+
+Podłaczamy zasilacz USB 5V, korzystając z Modułu Micro USB połączonego z pinami Arduino jak na ilustracji poniżej. Przewody z modułu USB wpinamy w gniazda RAW (5V) oraz GND Arduino.
 
 ![Podłączenie zasilacza USB](../Media/devboard_A_5.jpg)
