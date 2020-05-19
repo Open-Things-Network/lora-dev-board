@@ -47,7 +47,13 @@ Płytka z przylutowanym modułem RFM95 i anteną helikalną. Antena wykonana zgo
 
 Przed przystąpieniem do kompilowania przykładowego programu i wgraniem go do urządzenia, musimy to urządznie zarejestrować u wybranego dostawcy sieci LoRaWAN - w tym przypadku The Things Network.
 
-Proces rejestracji jest opisanw w wielu miejscach, więc tutaj podsumujmy jedynie, że po zarejestrowaniu urządzenia musimy przypisane mu wartości .... wpisać do kodu naszego przykładowego szablonu:
+Proces rejestracji jest opisanw w wielu miejscach, więc tutaj podsumujmy jedynie, że po zarejestrowaniu urządzenia musimy przypisane mu wartości `Device Address`, `Network Session Key`, oraz `App Session Key` wpisać do kodu naszego przykładowego szablonu:
+
+|Nazwa w Device Settings|Nazwa zmiennej w szablonie|
+|---|---|
+|Device Address|DEVADDR|
+|Network Session Key|NWKSKEY|
+|App Session Key|APPSKEY|
 
 
 ```
