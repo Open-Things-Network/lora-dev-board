@@ -43,6 +43,26 @@ Płytka z przylutowanym modułem RFM95 i anteną helikalną. Antena wykonana zgo
 
 ![RFM95 i antena](../Media/devboard_A_3.jpg)
 
+### Rejestracja urządzenia w sieci LoRaWAN The Things Network
+
+Przed przystąpieniem do kompilowania przykładowego programu i wgraniem go do urządzenia, musimy to urządznie zarejestrować u wybranego dostawcy sieci LoRaWAN - w tym przypadku The Things Network.
+
+Proces rejestracji jest opisanw w wielu miejscach, więc tutaj podsumujmy jedynie, że po zarejestrowaniu urządzenia musimy przypisane mu wartości .... wpisać do kodu naszego przykładowego szablonu:
+
+
+```
+//...
+
+// ------- LoRaWAN configuration
+
+// ABP mode - set DevAddr and session keys
+static const PROGMEM u1_t NWKSKEY[16] = { 0x11, 0x09, 0xAD, 0x04, 0x4C, 0x4F, 0xB7, 0xA5, 0x2D, 0x86, 0xF7, 0x2E, 0xD0, 0xDD, 0x5B, 0x3B };
+static const PROGMEM u1_t APPSKEY[16] = { 0xE0, 0xD8, 0x4F, 0xEE, 0xC3, 0x7C, 0xC9, 0x9B, 0xD3, 0xF2, 0x03, 0x61, 0xE4, 0xF2, 0x5B, 0xFE };
+static const u4_t DEVADDR = 0x2601108E;
+
+// ...
+```
+
 ### Kompilacja programu
 
 DO OPISANIA
