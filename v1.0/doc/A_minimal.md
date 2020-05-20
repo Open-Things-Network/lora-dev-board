@@ -29,6 +29,8 @@ stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na
 
 ### Zamówienie PCB
 
+Dla wersji minimalnej urządzenia możemy użyć płytki w wersji 1.0, jak i 1.1.
+
 DO UZUPEŁNIENIA
 
 ### Podłączenie Arduino Pro Mini
@@ -55,7 +57,15 @@ Proces rejestracji jest dobrze opisany w [dokumentacji The Things Network](https
 
 ### Kompilacja programu
 
-DO UZUPEŁNIENIA
+Do skompilowania i wgrania programu można zastosowac Arduino IDE. Należy pamiętać o:
+
+* zainstalowaniu wymaganych przez program bibliotek - wymienione w [/templates/README.md](/templates/README.md)
+* wybraniu z menu właściwego rodzaju płytki - Arduino Pro Mini
+* wybraniu z menu własciwego procesora - 3.3V, 8MHz
+
+Najprościej będzie utworzyć nowy sketch (menu: `Plik > Nowy`), wykasować cały domyślny kod, który się pojawia, wkleić zawartość naszego szablonu `lorawan-rfm-template.ino` i zapisać plik pod wybraną nazwą.
+
+Następnie możemy dokonać niezbędnych modyfikacji kodu, zaczynając od parametrów konfiguracyjnych urządzenia.
 
 Przypisane urządzeniu w trakcie rejestracji wartości `Device Address`, `Network Session Key`, oraz `App Session Key` należy wpisać do kodu szablonu poniżej linii `// ABP mode - set DevAddr and session keys`:
 
@@ -64,6 +74,8 @@ Przypisane urządzeniu w trakcie rejestracji wartości `Device Address`, `Networ
 |Device Address|DEVADDR|
 |Network Session Key|NWKSKEY|
 |App Session Key|APPSKEY|
+
+Fragment programu z podstawionymi parametrami:
 
 ```
 //...
