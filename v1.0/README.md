@@ -122,7 +122,7 @@ W schemacie została wprowadzona zmiana elementu **Q2** na **YJL2301F**. Zmieni�
 
 ![mosfet update](Media/mosfet.jpg)
 
-> **UWAGA! Poniższa zmiana dotyczy tylko płytki w wersji 1.0.**
+> **UWAGA! Opisana poniżej modyfikacja dotyczy tylko płytki w wersji 1.0.**
 
 Należy uwzględnić poprawkę w montażu płytki - tranzystor Q2 musi być odwrócony "do góry nóżkami" i wlutowany w następujący sposób:
 
