@@ -62,7 +62,7 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6 (makro `VBAT`).
 |:----:|:---:|:------------|
 |JP4|PWR ON|Pozwala na ominięcie mechanicznego włącznika zasilania SW1 (zasilanie zawsze włączone)|
 |JP2|VCC/VBAT|Pozwala na ominięcie regulatora napięcia LDO i bezpośrednie podanie napięcia z baterii na VCC Arduino|
-|JP9|OUT VBAT/VCC|Wybór źródła zasilania układów zewnętrznych - bateria lub regulator napięcia)|
+|JP9|OUT VBAT/VCC|Wybór źródła zasilania układów zewnętrznych - bateria lub regulator napięcia|
 |JP3|DIO2/D6|Sposób wykorzystania pinu 6 Arduino (jako DIO2 do transceivera w **RFM95W** lub wejście/wyjście ogólnego przeznaczenia)|
 |JP7|SCL|Pozwala na wykorzystanie interfejsu I2C modułu **RN2483A** poprzez złącze J4 (dotyczy tylko wariantu 3)|
 |JP8|SDA|Pozwala na wykorzystanie interfejsu I2C modułu **RN2483A** poprzez złącze J4 (dotyczy tylko wariantu 3)|
@@ -118,10 +118,12 @@ W kolumnach A, B, C, D i E zaznaczone zostały elementy wymagane (+) i opcjonaln
 |R4|1k SMD 1206| |\*| |\*|\*|Zasilanie układów zew.|
 
 # Uwagi
-W schemacie została wprowadzona zmiana elementu **Q2** na **YJL2301F** oraz jego połączeniu. 
+W schemacie została wprowadzona zmiana elementu **Q2** na **YJL2301F**. Zmienił się również sposób jego podłączenia. 
 
 ![mosfet update](Media/mosfet.jpg)
 
-Należy uwzględnić poprawkę w montażu płytki, mosfet należy odwrócić "do góry nóżkami" i wlutować w następujący sposób:
+> **UWAGA! Poniższa zmiana dotyczy tylko płytki w wersji 1.0.**
+
+Należy uwzględnić poprawkę w montażu płytki - tranzystor Q2 musi być odwrócony "do góry nóżkami" i wlutowany w następujący sposób:
 
 ![mosfet pcb](Media/mosfet2.jpg)
