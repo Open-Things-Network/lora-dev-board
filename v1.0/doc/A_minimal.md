@@ -29,9 +29,7 @@ stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na
 
 ### Zamówienie PCB
 
-Dla wersji minimalnej urządzenia możemy użyć płytki w wersji 1.0, jak i 1.1.
-
-DO UZUPEŁNIENIA
+Dla wersji minimalnej urządzenia możemy użyć płytki w wersji 1.0, jak i 1.1. Archiwum z plikami Gerber wymagane przy składaniu zamówienia: [Pliki_produkcyjne.zip](/v1.1/Pliki_produkcyjne.zip)
 
 ### Podłączenie Arduino Pro Mini
 
