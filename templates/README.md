@@ -112,6 +112,13 @@ void os_getDevKey (u1_t* buf) { }
 ## Wykorzystanie zasobów platformy
 ### Pomiar napięcia baterii
 ### Obsługa portu szeregowego
+Oprócz sprzętowego portu szeregowego modułu Arduino Pro Mini (używanego również do programowania i debugowania), dostępny jest dodatkowy port obsługiwany programowo dzięki zastosowaniu standardowej biblioteki `SoftwareSerial`. Port ten jest podpięty pod piny 8 (RX) i 9 (TX) Arduino Pro Mini. Wyprowadzenie sygnałów na złącze J3 (UART) pozwala na podłączenie do płytki dodatkowych urządzeń zewnętrznych (np. odbiornika GPS).
+
+```c
+SoftwareSerial userSerial(8, 9); // GPSP available on J3 (RX, TX)  
+...
+userSerial.begin(9600);
+```
 ### Wykorzystanie diody LED
 Na płytce można zamontować dodatkową diodę LED podłączoną do pinu 2 Arduino Pro Mini.
 ```c
