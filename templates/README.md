@@ -80,12 +80,12 @@ Wywołanie poniższej funkcji powoduje kompensację błędów zegara i opóźnie
 LMIC_setClockError(MAX_CLOCK_ERROR * 1 / 100);
 ```
 
-Ustawianie parametru DR (*Data Rate*) oraz mocy nadajnika umożliwia funkcja `LMIC_setDrTxpow()`. Przykład użycia tej funkcji w celu ustawienia DR0 (SF7) i mocy nadajnika na poziomie 14dBm (25mW - maksymalna dopuszczalna):
+Ustawianie parametru DR (*Data Rate*) oraz mocy nadajnika umożliwia funkcja `LMIC_setDrTxpow()`. Przykład użycia tej funkcji w celu ustawienia DR0 (SF7) i mocy nadajnika na poziomie 14dBm (czyli 25mW):
 ```c
 LMIC_setDrTxpow(DR_SF7, 14);
 ```
 
-Wywołanie tej funkcji powoduje wyłączenie trybu sprawdzania połączenia, które w przypadku ABP nie ma praktycznie zastosowania:
+Wywołanie tej funkcji powoduje wyłączenie trybu sprawdzania połączenia z siecią, które w przypadku ABP nie ma praktycznie zastosowania:
 ```c
 LMIC_setLinkCheckMode(0);
 ```
