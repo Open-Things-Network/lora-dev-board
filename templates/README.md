@@ -118,7 +118,7 @@ Na płytce można zamontować dodatkową diodę LED podłączoną do pinu 2 Ardu
 #define USER_LED 2 // additional LED
 ```
 Dioda ta może być wykorzystana w aplikacji w dowolny sposób.
-W prezentowanych szablonach dioda służy jako wskaźnik komunikacji LoRaWAN. Jest włączana przed zainicjowaniem wysyłania danych i wyłączana po zakończeniu cyklu transmisji i odbioru danych. 
+W prezentowanych szablonach służy jako wskaźnik komunikacji LoRaWAN - jest włączana przed zainicjowaniem wysyłania danych i wyłączana po zakończeniu cyklu transmisji i odbioru danych. 
 
 Sterowanie diodą LED:
 ```c
