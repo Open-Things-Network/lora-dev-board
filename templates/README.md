@@ -90,7 +90,7 @@ Wywołanie tej funkcji powoduje wyłączenie trybu sprawdzania połączenia z si
 LMIC_setLinkCheckMode(0);
 ```
 
-Jeśli aplikacja wykorzystuje APB, a urządzenie nie pracuje w klasie B, to warto zaoszczędzić trochę zasobów wyłączając część kodu odpowiedzialną za obsługę nieużywanych funkcjonalności. Można tego dokonać poprzez odkomentowanie następujących definicji w pliku `src/lmic/config.h` biblioteki LMIC:
+Jeśli aplikacja wykorzystuje ABP, a urządzenie nie pracuje w klasie B, to warto zaoszczędzić trochę zasobów wyłączając część kodu odpowiedzialną za obsługę nieużywanych funkcjonalności. Można tego dokonać poprzez odkomentowanie następujących definicji w pliku `src/lmic/config.h` biblioteki LMIC:
 ```c
 // Uncomment this to disable all code related to joining
 #define DISABLE_JOIN
@@ -112,5 +112,19 @@ void os_getDevKey (u1_t* buf) { }
 ## Wykorzystanie zasobów platformy
 ### Pomiar napięcia baterii
 ### Obsługa portu szeregowego
-### Wykorzystanie diody LED 
+### Wykorzystanie diody LED
+Na płytce można zamontować dodatkową diodę LED podłączoną do pinu 2 Arduino Pro Mini.
+```c
+#define USER_LED 2 // additional LED
+```
+Dioda ta może być wykorzystana w aplikacji w dowolny sposób.
+W prezentowanych szablonach dioda służy jako wskaźnik komunikacji LoRaWAN. Jest włączana przed zainicjowaniem wysyłania danych i wyłączana po zakończeniu cyklu transmisji i odbioru danych. 
+
+Sterowanie diodą LED:
+```c
+pinMode(USER_LED, OUTPUT);
+...
+digitalWrite(USER_LED, HIGH);
+digitalWrite(USER_LED, LOW);
+```
 ### Sterowanie zasilaniem układów zewnętrznych
