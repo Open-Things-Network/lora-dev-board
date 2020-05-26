@@ -90,7 +90,7 @@ Wywołanie tej funkcji powoduje wyłączenie trybu sprawdzania połączenia z si
 LMIC_setLinkCheckMode(0);
 ```
 
-Jeśli aplikacja wykorzystuje APB, a urządzenie nie pracuje w klasie B, to warto zaoszczędzić trochę zasobów wyłączając część kodu LMIC, która odpowiada za obsługę OTAA oraz mechanizmy specyficzne dla klasy B. W tym celu w pliku `arduino-lmic/src/lmic/config.h` należy odkomentować następujące definicje:
+Jeśli aplikacja wykorzystuje APB, a urządzenie nie pracuje w klasie B, to warto zaoszczędzić trochę zasobów wyłączając część kodu odpowiedzialną za obsługę nieużywanych funkcjonalności. Można tego dokonać poprzez odkomentowanie następujących definicji w pliku `src/lmic/config.h` biblioteki LMIC:
 ```c
 // Uncomment this to disable all code related to joining
 #define DISABLE_JOIN
@@ -100,7 +100,7 @@ Jeśli aplikacja wykorzystuje APB, a urządzenie nie pracuje w klasie B, to wart
 // Requires ping to be disabled too
 #define DISABLE_BEACONS
 ```
-W tym przypadku można również usunąć z aplikacji nieużywane funkcje (ich brak nie będzie już generował błędów podczas kompilacji):
+W ten sposób można zyskać nawet kilka kilobajtów pamięci programu. Dzięki temu można również usunąć z aplikacji nieużywane funkcje (ich brak nie będzie już generował błędów podczas kompilacji):
 ```c
 void os_getArtEui (u1_t* buf) { }
 void os_getDevEui (u1_t* buf) { }
