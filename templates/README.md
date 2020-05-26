@@ -65,8 +65,8 @@ LMIC_setupChannel(5, 867500000, DR_RANGE_MAP(DR_SF12, DR_SF7), BAND_CENTI);
 LMIC_setupChannel(6, 867700000, DR_RANGE_MAP(DR_SF12, DR_SF7), BAND_CENTI);
 LMIC_setupChannel(7, 867900000, DR_RANGE_MAP(DR_SF12, DR_SF7), BAND_CENTI);
 ```
-Jest jeszcze jeden dedykowany kanał 869.525MHz, który służy tylko do przesyłania wiadomości w kierunku do urządzenia (*downlink*) w tzw. drugim oknie odbiorczym RX2. 
-Parametry transmisji w tym kanale są stałe i ustawione domyślnie na SF12BW125, czyli DR0 (*Data Rate 0*) i szerokość kanału 125kHz. W przypadku sieci TTN parametr ten powinien być zmieniony na SF9BW125 (DR2):
+Jest jeszcze jeden dedykowany kanał (869.525MHz) o szerokości 125kHz, który służy tylko do przesyłania informacji w kierunku do urządzenia (*downlink*) w tzw. drugim oknie odbiorczym RX2. 
+Parametry transmisji w tym kanale są stałe i ustawione domyślnie na SF12, czyli DR0 (*Data Rate 0*). W przypadku sieci TTN parametr ten powinien być zmieniony na SF9 (DR2):
 ```c 
 LMIC.dn2Dr = DR_SF9;
 ```
