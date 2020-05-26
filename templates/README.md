@@ -80,17 +80,17 @@ Wywołanie poniższej funkcji powoduje kompensację błędów zegara i opóźnie
 LMIC_setClockError(MAX_CLOCK_ERROR * 1 / 100);
 ```
 
-Ustawianie parametru DR (*Data Rate*) oraz mocy nadajnika umożliwia funkcja `LMIC_setDrTxpow()`. Przykład użycia funkcji w celu ustawienia DR0 (SF7) i maksymalnej dopuszczalnej mocy 14dBm (25mW):
+Ustawianie parametru DR (*Data Rate*) oraz mocy nadajnika umożliwia funkcja `LMIC_setDrTxpow()`. Przykład użycia tej funkcji w celu ustawienia DR0 (SF7) i mocy nadajnika na poziomie 14dBm (25mW - maksymalna dopuszczalna):
 ```c
 LMIC_setDrTxpow(DR_SF7, 14);
 ```
 
-Wywołanie poniższej funkcji powoduje wyłączenie trybu sprawdzania połączenia, które w przypadku ABP nie ma praktycznie zastosowania:
+Wywołanie tej funkcji powoduje wyłączenie trybu sprawdzania połączenia, które w przypadku ABP nie ma praktycznie zastosowania:
 ```c
 LMIC_setLinkCheckMode(0);
 ```
 
-Jeśli aplikacja wykorzystuje APB, a urządzenie pracuje standardowo w klasie A, to warto zaoszczędzić trochę zasobów wyłączając część kodu LMIC, która odpowiada za obsługę OTAA oraz mechanizmy specyficzne dla klasy B. W tym celu w pliku `arduino-lmic/src/lmic/config.h` należy odkomentować następujące definicje:
+Jeśli aplikacja wykorzystuje APB, a urządzenie nie pracuje w klasie B, to warto zaoszczędzić trochę zasobów wyłączając część kodu LMIC, która odpowiada za obsługę OTAA oraz mechanizmy specyficzne dla klasy B. W tym celu w pliku `arduino-lmic/src/lmic/config.h` należy odkomentować następujące definicje:
 ```c
 // Uncomment this to disable all code related to joining
 #define DISABLE_JOIN
