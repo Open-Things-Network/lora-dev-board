@@ -111,6 +111,11 @@ void os_getDevKey (u1_t* buf) { }
 ## Oszczędzanie energii
 ## Wykorzystanie zasobów platformy
 ### Pomiar napięcia baterii
+Napięcie baterii zostało podane na wejście analogowe A0 modułu Arduino Pro Mini poprzez dzielnik napięcia. Wartość napięcia wyrażoną w woltach można odczytać wykorzystując makro `VBAT`. 
+```c
+#define VBAT (analogRead(A0) * 0.00424568)
+```
+Zastosowana stała wynika z wartości rezystancji użytych do budowy dzielnika oraz wartości napięcia wewnętrznego źródła referencyjnego. 
 ### Obsługa portu szeregowego
 Oprócz sprzętowego portu szeregowego modułu Arduino Pro Mini (używanego również do programowania i debugowania), płytka udostępnia dodatkowy port obsługiwany programowo dzięki zastosowaniu standardowej biblioteki `SoftwareSerial`. Port ten jest podpięty pod piny 8 (RX) i 9 (TX) Arduino Pro Mini. Wyprowadzenie sygnałów na złącze J3 (UART) pozwala na podłączenie dodatkowych urządzeń zewnętrznych (np. odbiornika GPS).
 
@@ -135,3 +140,16 @@ digitalWrite(USER_LED, HIGH);
 digitalWrite(USER_LED, LOW);
 ```
 ### Sterowanie zasilaniem układów zewnętrznych
+Układ zasilania urządzeń zewnętrznych zbudowany z tranzystorów Q1 i Q2 został podłączony do pinu 3 modułu Arduino Pro Mini. Układ ten zapewnia odpowiednią wydajność prądową, a także umożliwia sterowanie obecnością napięcia na padach TP5. W zależności od zworki JP9 będzie to napięcie z układu regulatora (VCC) lub napięcie baterii (VBAT). 
+
+Sterowanie zasilaniem urządzeń zewnętrznych z poziomu aplikacji odbywa się poprzez ustawianie odpowiedniego stanu na wyjściu `VOUT_ENABLE`. 
+```c
+#define VOUT_ENABLE 3 
+```
+Przykład realizacji sterowania:
+```c
+pinMode(VOUT_ENABLE, OUTPUT);
+...
+digitalWrite(VOUT_ENABLE, HIGH);
+digitalWrite(VOUT_ENABLE, LOW);
+```
