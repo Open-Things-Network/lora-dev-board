@@ -73,7 +73,7 @@ LMIC.dn2Dr = DR_SF9;
 To wystarczy żeby rozpocząć komunikację z wykorzystaniem The Things Network - otwartej sieci LoRaWAN.
 
 LMIC oferuje prosty model programowania oparty na zdarzeniach, w którym wszystkie zdarzenia protokołu są wysyłane do funkcji zwrotnej `onEvent()`.
-W tym modelu cały kod aplikacji jest uruchamiany w tak zwanych zadaniach (funkcjach), które są wykonywane w głównym wątku za pomocą harmonogramu `os_runloop_once()`. Do zarządzania zadaniami wymagana jest dodatkowa struktura `osjob_t`, która identyfikuje zadanie i przechowuje informacje kontekstowe. Przykładem zadania w opisywanym szablonie jest funkcja `do_send()` odpowiadająca za przygotowanie i  wysyłanie danych. Zadanie to jest wykonywane cyklicznie co określony interwał (`TX_INTERVAL`). Wysyłanie danych z urządzenia do sieci jest inicjowane wywołaniem funkcji `LMIC_setTxData2()`. Zakończenie wysyłania danych jest sygnalizowane wystąpieniem zdarzenia `EV_TXCOMPLETE` obsługiwanego w `onEvent()`. W tym miejscu planowane jest kolejne wykonanie zadania poprzez wywołanie `os_setTimedCallback()`. Można również sprawdzić, czy nie zostały odebrane informacje zwrotne przesłane z sieci do urządzenia.    
+W tym modelu cały kod aplikacji jest uruchamiany w tak zwanych zadaniach (funkcjach), które są wykonywane w głównym wątku za pomocą harmonogramu `os_runloop_once()`. Do zarządzania zadaniami wymagana jest dodatkowa struktura `osjob_t`, która identyfikuje zadanie i przechowuje informacje kontekstowe. Przykładem zadania w opisywanym szablonie jest funkcja `do_send()` odpowiadająca za przygotowanie i  wysyłanie danych. Zadanie to jest wykonywane cyklicznie co określony interwał (`TX_INTERVAL`). Wysyłanie danych z urządzenia do sieci jest inicjowane wywołaniem funkcji `LMIC_setTxData2()`. Zakończenie wysyłania danych jest sygnalizowane wystąpieniem zdarzenia `EV_TXCOMPLETE` obsługiwanego w `onEvent()`. W tym miejscu planowane jest kolejne wykonanie zadania poprzez wywołanie `os_setTimedCallback()`. Można również sprawdzić, czy zostały odebrane informacje zwrotne przesłane z sieci do urządzenia.    
 
 Wywołanie poniższej funkcji powoduje kompensację błędów zegara i opóźnień wprowadzanych przez program, co w rezultacie zwiększa szansę odebrania informacji zwrotnej przesyłanej do urządzenia w wyznaczonych oknach czasowych (dokładny opis problemu znajduje się w [dokumentacji LMIC](https://github.com/matthijskooijman/arduino-lmic#timing)).
 ```c 
@@ -112,7 +112,7 @@ void os_getDevKey (u1_t* buf) { }
 ## Wykorzystanie zasobów platformy
 ### Pomiar napięcia baterii
 ### Obsługa portu szeregowego
-Oprócz sprzętowego portu szeregowego modułu Arduino Pro Mini (używanego również do programowania i debugowania), dostępny jest dodatkowy port obsługiwany programowo dzięki zastosowaniu standardowej biblioteki `SoftwareSerial`. Port ten jest podpięty pod piny 8 (RX) i 9 (TX) Arduino Pro Mini. Wyprowadzenie sygnałów na złącze J3 (UART) pozwala na podłączenie do płytki dodatkowych urządzeń zewnętrznych (np. odbiornika GPS).
+Oprócz sprzętowego portu szeregowego modułu Arduino Pro Mini (używanego również do programowania i debugowania), płytka udostępnia dodatkowy port obsługiwany programowo dzięki zastosowaniu standardowej biblioteki `SoftwareSerial`. Port ten jest podpięty pod piny 8 (RX) i 9 (TX) Arduino Pro Mini. Wyprowadzenie sygnałów na złącze J3 (UART) pozwala na podłączenie dodatkowych urządzeń zewnętrznych (np. odbiornika GPS).
 
 ```c
 SoftwareSerial userSerial(8, 9); // GPSP available on J3 (RX, TX)  
