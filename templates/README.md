@@ -140,7 +140,7 @@ digitalWrite(USER_LED, HIGH);
 digitalWrite(USER_LED, LOW);
 ```
 ### Sterowanie zasilaniem układów zewnętrznych
-Układ zasilania urządzeń zewnętrznych zbudowany z tranzystorów Q1 i Q2 został podłączony do pinu 3 modułu Arduino Pro Mini. Układ ten zapewnia odpowiednią wydajność prądową, a także umożliwia sterowanie obecnością napięcia na padach TP5. W zależności od zworki JP9 będzie to napięcie z układu regulatora (VCC) lub napięcie baterii (VBAT). 
+Układ zasilania urządzeń zewnętrznych zbudowany z tranzystorów Q1 i Q2 został podłączony do pinu 3 modułu Arduino Pro Mini. Układ ten zapewnia odpowiednią wydajność prądową, a także umożliwia sterowanie obecnością napięcia na padach TP5 (VOUT) i TP6 (GND). W zależności od zworki JP9 będzie to napięcie z układu regulatora (VCC) lub napięcie baterii (VBAT). 
 
 Sterowanie zasilaniem urządzeń zewnętrznych z poziomu aplikacji odbywa się poprzez ustawianie odpowiedniego stanu na wyjściu `VOUT_ENABLE`. 
 ```c
