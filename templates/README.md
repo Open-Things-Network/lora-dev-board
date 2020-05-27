@@ -111,7 +111,7 @@ void os_getDevKey (u1_t* buf) { }
 ## Oszczędzanie energii
 ## Wykorzystanie zasobów platformy
 ### Pomiar napięcia baterii
-Napięcie baterii zostało podane na wejście analogowe A0 modułu Arduino Pro Mini poprzez dzielnik napięcia. Wartość napięcia wyrażoną w woltach można odczytać wykorzystując makro `VBAT`. 
+Napięcie baterii zostało doprowadzone do dzielnika napięcia, którego wyjście jest podłączone do wejścia analogowego A0 modułu Arduino Pro Mini. Makro `VBAT` zwraca wartość napięcia baterii wyrażoną w woltach. 
 ```c
 #define VBAT (analogRead(A0) * 0.00424568)
 ```
