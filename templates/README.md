@@ -39,6 +39,8 @@ const lmic_pinmap lmic_pins = {
     .dio = { 5, 7, LMIC_UNUSED_PIN }, // lub { 5, 7, 6 } jeśli ma być wykorzystany również DIO2
 };
 ```
+> LMIC potrzebuje dostępu do DIO0, DIO1 i opcjonalnie DIO2. Wykorzystanie DIO2 dotyczy tylko pracy z modulacją FSK. W przypadku modulacji LoRa używane są DIO0 i DIO1.
+
 Kolejnym krokiem jest przekazanie informacji o sposobie aktywacji urządzenia w sieci.
 W szablonie użyto aktywacji według personalizacji (ABP - *Activation By Personalization*). Jest to najprostszy sposób aktywacji wykorzystywany do realizacji urządzenia podłączonego na stałe do jednej wybranej sieci. Urządzenie jest gotowe do pracy zaraz po rejestracji w sieci. Proces rejestracji urządzenia w sieci The Things Network jest dobrze opisany w [dokumentacji](https://www.thethingsnetwork.org/docs/devices/registration.html). Podczas rejestracji należy pamiętać o wybraniu metody aktywacji ABP.
 
@@ -108,6 +110,38 @@ void os_getDevKey (u1_t* buf) { }
 ```
 ## Interwał wysyłania danych
 ## Rodzaj i format danych
+W szablonach został wykorzystany popularny sposób kodowania danych [Cayenne LPP (*Low Power Payload*)](https://developers.mydevices.com/cayenne/docs/lora/#lora-cayenne-low-power-payload), który znacząco upraszcza przygotowanie i wysyłanie danych. Wadą stosowania Cayenne LPP jest zwiększony rozmiar przesyłanych danych, ponieważ do każdej wartości dodawane są dodatkowe informacje określające identyfikator kanału oraz typ danych.
+
+Przykład użycia Cayenne LPP:
+```c
+#include <CayenneLPP.h>
+```
+* utworzenie bufora o długości 51 bajtów
+```c
+CayenneLPP lppdata(51);
+```
+* wyczyszczenie bufora i dodanie wartości (w tym przypadku napięcie baterii jako wejscie analogowe, kanał 1)
+```c
+lppdata.reset();
+lppdata.addAnalogInput(1, VBAT);
+```
+* wysłanie danych z wykorzystaniem `getBuffer()` i `getSize()`  
+```c
+LMIC_setTxData2(1, lppdata.getBuffer(), lppdata.getSize(), 0); 
+```
+Odbierane dane mogą być automatycznie dekodowane po stronie aplikacji zdefiniowanej w TTN bez konieczności tworzenia własnego dekodera (wystarczy zmienić `Payload Format` z `Custom` na `Cayenne LPP`).<br>
+Przykład zdekodowanej wiadomości:
+```
+{
+  "analog_in_1": 3.77
+}
+```
+
+Zastosowanie dyrektywy
+```c
+#define JUST_SEND_HELLO
+```
+powoduje, że urządzenie wysyła tylko wiadomość o treści `"Hello!"`. 
 ## Oszczędzanie energii
 ## Wykorzystanie zasobów platformy
 ### Pomiar napięcia baterii
