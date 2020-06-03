@@ -36,9 +36,18 @@ Płytka pozwala na realizację interfejsu LoRaWAN na dwa różne sposoby:
 
 ## Układ zasilania
 Zastosowany regulator napięcia LDO [TS2940CW33](https://www.taiwansemi.com/en/products/details/TS2940CW33).
+* Maksymalne napięcie zasilania - 26V
+* Minimalne napięcie zasilania - 3,5V
+* Spadek napięcia dla prądu 100mA - 100mV, 800mA - 600mV
+* Napięcie wyjściowe - 3.3V
+* Prąd maksymalny - 1A
 
 ## Układ ładowania
 Zastosowany kontroler ładowania akumulatorów litowo-polimerowych (Li-Po) i litowo-jonowych (Li-Ion) [MCP73831](https://www.microchip.com/wwwproducts/en/en024903#additional-features).
+* Maksymalne napięcie zasilania - 6V
+* Minimalne napięcie zasilania - 3.75V
+* Napięcie ładowania - 4.2V
+* Prąd ładowania reguluje się przez dobranie R1, dla 2kOhm - 500mA, 4kOhm - 250mA
 
 ## Diody LED
 |Oznaczenie|Opis|
