@@ -154,6 +154,18 @@ Zastosowanie dyrektywy
 ```
 powoduje, że urządzenie wysyła tylko wiadomość o treści `"Hello!"`. 
 ## Oszczędzanie energii
+Szablony zawierają przykład prostej realizacji wprowadzania urządzenia w stan uśpienia w celu wydłużenia czasu pracy na baterii. Do tego celu wykorzystana została popularna biblioteka [Low Power](https://github.com/rocketscream/Low-Power) dla Arduino, która jest bardzo łatwa w użyciu dla początkującego programisty. Biblioteka dostarcza zestaw metod służących do wprowadzania mikrokontrolera w określony tryb uśpienia (*Sleep Mode*) z możliwością wyłączenia poszczególnych jego komponentów na określony czas. 
+```c
+#include <LowPower.h>
+```
+Włączenie trybu oszczędzania energii w programie odbywa się poprzez zastosowanie dyrektywy `SAVE_ENERGY`.
+```c
+#define SAVE_ENERGY
+``` 
+W programie wykorzystano funkcję `powerDown()`, która przełącza mikrokontroler w stan wyłączenia (*Power Down*). Jest to tryb maksymalnego oszczędzania energii, w którym wykorzystywana jest minimalna liczba peryferiów potrzebna do wznowienia pracy mikrokontrolera - w tym przypadku jest to przerwanie z WDT (*Watchdog Timer*). Wywołanie tej metody z parametrami jak poniżej powoduje wyłączenie mikrokontrolera na czas 8 sekund.
+```c
+LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
+```
 ## Wykorzystanie zasobów platformy
 ### Pomiar napięcia baterii
 Napięcie baterii zostało doprowadzone do dzielnika napięcia, którego wyjście jest podłączone do wejścia analogowego A0 modułu Arduino Pro Mini. Makro `VBAT` zwraca wartość napięcia baterii wyrażoną w woltach. 
