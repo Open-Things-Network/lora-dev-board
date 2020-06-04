@@ -165,7 +165,7 @@ Włączenie trybu oszczędzania energii w programie odbywa się poprzez zastosow
 ```c
 #define SAVE_ENERGY
 ``` 
-W programie wykorzystano metodę `powerDown()`, która przełącza mikrokontroler w stan wyłączenia (*Power Down*). Jest to tryb maksymalnego oszczędzania energii, w którym wykorzystywana jest minimalna liczba peryferiów potrzebna do wznowienia pracy mikrokontrolera - w tym przypadku przerwanie z WDT (*Watchdog Timer*). Wywołanie tej metody z parametrami jak poniżej powoduje wyłączenie mikrokontrolera na czas 8 sekund.
+W programie wykorzystano metodę `powerDown()`, która przełącza mikrokontroler w stan wyłączenia (*Power Down*). Jest to tryb maksymalnego oszczędzania energii, w którym wykorzystywana jest minimalna liczba zintegrowanych układów peryferyjnych potrzebna do wznowienia pracy mikrokontrolera - w tym przypadku przerwanie z WDT (*Watchdog Timer*). Wywołanie tej metody z parametrami jak poniżej powoduje wyłączenie mikrokontrolera na czas 8 sekund.
 ```c
 LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
 ```
