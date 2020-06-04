@@ -137,7 +137,7 @@ lppdata.reset();
 lppdata.addAnalogInput(1, VBAT);
 ```
 > Podstawowa wersja Cayenne LPP umożliwia kodowanie jedynie 12 typów danych. Jeśli brakuje typu odpowiedniego dla określonej wielkości mierzonej, to można zastosować wejście analogowe (`LPP_ANALOG_INPUT`). Takie rozwiązanie zostało wykorzystane w szablonach do przesyłania wartości napięcia elektrycznego. 
-* wysłanie danych z wykorzystaniem `getBuffer()` i `getSize()`  
+* wysłanie danych z wykorzystaniem `getBuffer()` i `getSize()` w celu wskazania miejsca przechowywania i określenia ilości danych
 ```c
 LMIC_setTxData2(1, lppdata.getBuffer(), lppdata.getSize(), 0); 
 ```
