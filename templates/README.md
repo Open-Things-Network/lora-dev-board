@@ -110,13 +110,16 @@ void os_getArtEui (u1_t* buf) { }
 void os_getDevEui (u1_t* buf) { }
 void os_getDevKey (u1_t* buf) { }
 ```
+### Zastosowanie RN2483
+Do uzupełnienia.
 ## Interwał wysyłania danych
 Czas pomiędzy kolejnymi próbami wysyłania danych do sieci LoRaWAN (*uplink*) określa stała `TX_INTERVAL`. Wartość domyślna, to 60 sekund. 
 ```c
 const unsigned TX_INTERVAL = 60;
 ```
-Należy pamiętać o obowiązujących ograniczeniach dotyczących zajętości pasma. Zasady dostępu do kanału (tzw. cykl pracy nadajnika - *Duty Cycle*) oraz dopuszczalna moc sygnału nadawanego są ściśle określone w stosownych normach. W Europie zasady wykorzystania pasma otwartego 868MHz definiuje norma ETSI EN 300 220. Zarówno LMIC, jak i stos LoRaWAN zaimplementowany w układzie RN2483A respektują te ograniczenia, a każda próba wysłania wiadomości, która narusza zasady zakończy się błędem (`no_free_ch` w przypadku RN2483A).<br>
-W sieci The Things Network obowiązują również dodatkowe limity związane z czasem nadawania (*Fair Access Policy*). 
+Należy pamiętać o obowiązujących ograniczeniach dotyczących zajętości pasma. Zasady dostępu do kanału (tzw. cykl pracy nadajnika - *Duty Cycle*) oraz dopuszczalna moc sygnału nadawanego są ściśle określone w stosownych normach. W Europie sposób wykorzystania pasma otwartego 868MHz określa norma ETSI EN 300 220.<br>
+Zarówno LMIC, jak i stos LoRaWAN zaimplementowany w układzie RN2483A uwzględniają te ograniczenia, a każda próba wysłania wiadomości, która narusza zasady zakończy się błędem (`no_free_ch` w przypadku RN2483A).<br>
+W sieci The Things Network obowiązują również dodatkowe limity związane z czasem nadawania (tzw. *Fair Access Policy*). 
 
 Wszystkie te ograniczenia są opisane w [dokumentacji TTN](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle.html).
 
@@ -162,7 +165,7 @@ Włączenie trybu oszczędzania energii w programie odbywa się poprzez zastosow
 ```c
 #define SAVE_ENERGY
 ``` 
-W programie wykorzystano funkcję `powerDown()`, która przełącza mikrokontroler w stan wyłączenia (*Power Down*). Jest to tryb maksymalnego oszczędzania energii, w którym wykorzystywana jest minimalna liczba peryferiów potrzebna do wznowienia pracy mikrokontrolera - w tym przypadku przerwanie z WDT (*Watchdog Timer*). Wywołanie tej metody z parametrami jak poniżej powoduje wyłączenie mikrokontrolera na czas 8 sekund.
+W programie wykorzystano metodę `powerDown()`, która przełącza mikrokontroler w stan wyłączenia (*Power Down*). Jest to tryb maksymalnego oszczędzania energii, w którym wykorzystywana jest minimalna liczba peryferiów potrzebna do wznowienia pracy mikrokontrolera - w tym przypadku przerwanie z WDT (*Watchdog Timer*). Wywołanie tej metody z parametrami jak poniżej powoduje wyłączenie mikrokontrolera na czas 8 sekund.
 ```c
 LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
 ```
