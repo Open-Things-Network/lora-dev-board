@@ -49,7 +49,7 @@ Zastosowany kontroler ładowania akumulatorów litowo-polimerowych (Li-Po) i lit
 * Maksymalne napięcie zasilania - 6V
 * Minimalne napięcie zasilania - 3.75V
 * Napięcie ładowania - 4.2V
-* Prąd ładowania reguluje się przez dobranie R1, dla 2kOhm - 500mA, 4kOhm - 250mA
+* Prąd ładowania reguluje się przez dobranie R1, dla 2k&#x2126; - 500mA, 4k&#x2126; - 250mA
 
 > **UWAGA!** Złącze microUSB służy tylko do ładowania baterii. Podanie zasilania przez złącze microUSB przy zamontowanym układzie ładowania i bez baterii spowoduje nieprawidłowe działanie urządzenia.
 
