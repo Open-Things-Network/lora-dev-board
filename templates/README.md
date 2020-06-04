@@ -14,7 +14,9 @@ Wykorzystane biblioteki:
 
 ## Komunikacja LoRaWAN
 ### Zastosowanie RFM95W
-Komunikacja mikrokontrolera z układem SX1276 (nadajnik-odbiornik LoRa), który znajduje się na płytce RFM95W jest realizowana poprzez interfejs SPI. Szczegółowe informacje dotyczące układu transceivera SX1276 można znaleźć w [dokumentacji](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/2R0000001OKs/Bs97dmPXeatnbdoJNVMIDaKDlQz8q1N_gxDcgqi7g2o). Moduł RFM95W jest połączony z Arduino Pro Mini w następujący sposób:
+Komunikacja mikrokontrolera z układem SX1276 (nadajnik-odbiornik LoRa), który znajduje się na płytce RFM95W jest realizowana poprzez interfejs SPI. Szczegółowe informacje dotyczące transceivera SX1276 można znaleźć w [dokumentacji układu](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/2R0000001OKs/Bs97dmPXeatnbdoJNVMIDaKDlQz8q1N_gxDcgqi7g2o).
+
+Moduł RFM95W jest połączony z Arduino Pro Mini w następujący sposób:
 
 |RFM95W|Arduino Pro Mini|
 |:----:|:--------------:|
@@ -44,7 +46,7 @@ const lmic_pinmap lmic_pins = {
 Kolejnym krokiem jest przekazanie informacji o sposobie aktywacji urządzenia w sieci.
 W szablonie użyto aktywacji według personalizacji (ABP - *Activation By Personalization*). Jest to najprostszy sposób aktywacji wykorzystywany do realizacji urządzenia podłączonego na stałe do jednej wybranej sieci. Urządzenie jest gotowe do pracy zaraz po rejestracji w sieci. Proces rejestracji urządzenia w sieci The Things Network jest dobrze opisany w [dokumentacji](https://www.thethingsnetwork.org/docs/devices/registration.html). Podczas rejestracji należy pamiętać o wybraniu metody aktywacji ABP.
 
-Urządzenie posiada stały adres (*Device Address*) i zestaw kluczy sesyjnych wykorzystywanych do sprawdzania integralności wiadomości w warstwie sieci (*Network Session Key*) oraz do szyfrowania danych w warstwie aplikacji (*Application Session Key*). Zarówno adres urządzenia, jak i klucze sesji nie zmieniają się przez cały czas pracy urządzenia.<br>
+Urządzenie posiada stały adres (*Device Address*) i zestaw kluczy sesyjnych wykorzystywanych do sprawdzania integralności wiadomości w warstwie sieci (*Network Session Key*) oraz do szyfrowania danych w warstwie aplikacji (*Application Session Key*). Urządzenie jest więc aktywowane na etapie personalizacji i zarówno adres urządzenia, jak i klucze sesji nie zmieniają się przez cały czas pracy urządzenia.<br>
 Informacje uzyskane podczas rejestracji urządzenia należy wstawić w miejsce właściwych stałych:
 ```c
 static const PROGMEM u1_t NWKSKEY[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
@@ -75,7 +77,7 @@ LMIC.dn2Dr = DR_SF9;
 To wystarczy żeby rozpocząć komunikację z wykorzystaniem The Things Network - otwartej sieci LoRaWAN.
 
 LMIC oferuje prosty model programowania oparty na zdarzeniach, w którym wszystkie zdarzenia protokołu są wysyłane do funkcji zwrotnej `onEvent()`.
-W tym modelu cały kod aplikacji jest uruchamiany w tak zwanych zadaniach (funkcjach), które są wykonywane w głównym wątku za pomocą harmonogramu `os_runloop_once()`. Do zarządzania zadaniami wymagana jest dodatkowa struktura `osjob_t`, która identyfikuje zadanie i przechowuje informacje kontekstowe. Przykładem zadania w opisywanym szablonie jest funkcja `do_send()` odpowiadająca za przygotowanie i  wysyłanie danych. Zadanie to jest wykonywane cyklicznie co określony interwał (`TX_INTERVAL`). Wysyłanie danych z urządzenia do sieci jest inicjowane wywołaniem funkcji `LMIC_setTxData2()`. Zakończenie wysyłania danych jest sygnalizowane wystąpieniem zdarzenia `EV_TXCOMPLETE` obsługiwanego w `onEvent()`. W tym miejscu planowane jest kolejne wykonanie zadania poprzez wywołanie `os_setTimedCallback()`. Można również sprawdzić, czy zostały odebrane informacje zwrotne przesłane z sieci do urządzenia.    
+W tym modelu cały kod aplikacji jest uruchamiany w tak zwanych zadaniach (funkcjach), które są wykonywane w głównym wątku za pomocą harmonogramu `os_runloop_once()`. Do zarządzania zadaniami wymagana jest dodatkowa struktura typu `osjob_t`, która identyfikuje zadanie i przechowuje informacje kontekstowe. Przykładem zadania w opisywanym szablonie jest funkcja `do_send()` odpowiadająca za przygotowanie i  wysyłanie danych. Zadanie to jest wykonywane cyklicznie co określony interwał (`TX_INTERVAL`). Wysyłanie danych z urządzenia do sieci jest inicjowane wywołaniem funkcji `LMIC_setTxData2()`. Zakończenie wysyłania danych jest sygnalizowane wystąpieniem zdarzenia `EV_TXCOMPLETE` obsługiwanego w `onEvent()`. W tym miejscu planowane jest kolejne wykonanie zadania poprzez wywołanie `os_setTimedCallback()`. Można również sprawdzić, czy zostały odebrane informacje zwrotne przesłane z sieci do urządzenia.    
 
 Wywołanie poniższej funkcji powoduje kompensację błędów zegara i opóźnień wprowadzanych przez program, co w rezultacie zwiększa szansę odebrania informacji zwrotnej przesyłanej do urządzenia w wyznaczonych oknach czasowych (dokładny opis problemu znajduje się w [dokumentacji LMIC](https://github.com/matthijskooijman/arduino-lmic#timing)).
 ```c 
@@ -87,7 +89,7 @@ Ustawianie parametru DR (*Data Rate*) oraz mocy nadajnika umożliwia funkcja `LM
 LMIC_setDrTxpow(DR_SF7, 14);
 ```
 
-Wywołanie tej funkcji powoduje wyłączenie trybu sprawdzania połączenia z siecią, które w przypadku ABP nie ma praktycznie zastosowania:
+Fragment kodu przedstawiony poniżej wyłącza tryb sprawdzania połączenia z siecią, który w przypadku ABP nie ma praktycznie zastosowania.
 ```c
 LMIC_setLinkCheckMode(0);
 ```
@@ -109,8 +111,17 @@ void os_getDevEui (u1_t* buf) { }
 void os_getDevKey (u1_t* buf) { }
 ```
 ## Interwał wysyłania danych
+Czas pomiędzy kolejnymi próbami wysyłania danych do sieci LoRaWAN (*uplink*) określa stała `TX_INTERVAL`. Wartość domyślna, to 60 sekund. 
+```c
+const unsigned TX_INTERVAL = 60;
+```
+Należy pamiętać o obowiązujących ograniczeniach dotyczących zajętości pasma. Zasady dostępu do kanału (tzw. cykl pracy nadajnika - *Duty Cycle*) oraz dopuszczalna moc sygnału nadawanego są ściśle określone w stosownych normach. W Europie zasady wykorzystania pasma otwartego 868MHz definiuje norma ETSI EN 300 220. Zarówno LMIC, jak i stos LoRaWAN zaimplementowany w układzie RN2483A respektują te ograniczenia, a każda próba wysłania wiadomości, która narusza zasady zakończy się błędem (`no_free_ch` w przypadku RN2483A).<br>
+W sieci The Things Network obowiązują również dodatkowe limity związane z czasem nadawania (*Fair Access Policy*). 
+
+Wszystkie te ograniczenia są opisane w [dokumentacji TTN](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle.html).
+
 ## Rodzaj i format danych
-W szablonach został wykorzystany popularny sposób kodowania danych [Cayenne LPP (*Low Power Payload*)](https://developers.mydevices.com/cayenne/docs/lora/#lora-cayenne-low-power-payload), który znacząco upraszcza przygotowanie i wysyłanie danych. Wadą stosowania Cayenne LPP jest zwiększony rozmiar przesyłanych danych, ponieważ do każdej wartości dodawane są dodatkowe informacje określające identyfikator kanału oraz typ danych.
+W szablonach został wykorzystany popularny sposób kodowania danych [Cayenne LPP (*Low Power Payload*)](https://developers.mydevices.com/cayenne/docs/lora/#lora-cayenne-low-power-payload), który znacząco upraszcza przygotowanie i wysyłanie danych. Wadą stosowania Cayenne LPP jest zwiększony rozmiar przesyłanych danych, ponieważ do każdej wartości dodawane są informacje określające identyfikator kanału oraz typ danych.
 
 Przykład użycia Cayenne LPP:
 ```c
@@ -120,23 +131,23 @@ Przykład użycia Cayenne LPP:
 ```c
 CayenneLPP lppdata(51);
 ```
-* wyczyszczenie bufora i dodanie wartości (w tym przypadku napięcie baterii jako wejscie analogowe, kanał 1)
+* wyczyszczenie bufora i dodanie pierwszej wartości (w tym przypadku wartość napięcia baterii, kanał 1)
 ```c
 lppdata.reset();
 lppdata.addAnalogInput(1, VBAT);
 ```
+> Podstawowa wersja Cayenne LPP umożliwia kodowanie jedynie 12 typów danych. Jeśli brakuje typu odpowiedniego dla określonej wielkości mierzonej, to można zastosować wejście analogowe (`LPP_ANALOG_INPUT`). Takie rozwiązanie zostało wykorzystane w szablonach do przesyłania wartości napięcia elektrycznego. 
 * wysłanie danych z wykorzystaniem `getBuffer()` i `getSize()`  
 ```c
 LMIC_setTxData2(1, lppdata.getBuffer(), lppdata.getSize(), 0); 
 ```
-Odbierane dane mogą być automatycznie dekodowane po stronie aplikacji zdefiniowanej w TTN bez konieczności tworzenia własnego dekodera (wystarczy zmienić `Payload Format` z `Custom` na `Cayenne LPP`).<br>
+Odbierane dane mogą być automatycznie dekodowane po stronie aplikacji zdefiniowanej w TTN bez konieczności tworzenia własnego dekodera (wystarczy zmienić **Payload Format** z `Custom` na `Cayenne LPP`).<br>
 Przykład zdekodowanej wiadomości:
 ```
 {
   "analog_in_1": 3.77
 }
 ```
-
 Zastosowanie dyrektywy
 ```c
 #define JUST_SEND_HELLO
