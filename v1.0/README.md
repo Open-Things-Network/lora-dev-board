@@ -42,12 +42,16 @@ Zastosowany regulator napięcia LDO [TS2940CW33](https://www.taiwansemi.com/en/p
 * Napięcie wyjściowe - 3.3V
 * Prąd maksymalny - 1A
 
+> **UWAGA!** Do zasilania urządzenia wymagana jest bateria lub zasilacz podłączony do zacisków baterii (nie dotyczy wersji B).
+
 ## Układ ładowania
 Zastosowany kontroler ładowania akumulatorów litowo-polimerowych (Li-Po) i litowo-jonowych (Li-Ion) [MCP73831](https://www.microchip.com/wwwproducts/en/en024903#additional-features).
 * Maksymalne napięcie zasilania - 6V
 * Minimalne napięcie zasilania - 3.75V
 * Napięcie ładowania - 4.2V
 * Prąd ładowania reguluje się przez dobranie R1, dla 2kOhm - 500mA, 4kOhm - 250mA
+
+> **UWAGA!** Złącze microUSB służy tylko do ładowania baterii, podłączenie bez baterii spowoduje nie prawidłowe działanie urządzenia.
 
 ## Diody LED
 |Oznaczenie|Opis|
