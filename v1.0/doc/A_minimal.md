@@ -7,12 +7,12 @@ Wymaga zastosowania baterii lub zewnętrznego zasilacza USB podłączonego bezpo
 
 ## Wymagane elementy
 
-| Nr| Wersja | Element | Ilość | Uwagi |
+| Nr| Wariant | Element | Ilość | Uwagi |
 |-------|---|---------|-------|-------|
-|1|A1,A2|Moduł micro USB|1| Umożliwia zastosowanie standardowego zasilacza USB 5V|
-|2|A1,A2|Konwerter USB-UART|1| Konieczny do wgrania oprogramowania do Arduino|
-|3|A1,A2|RFM95W|1| Moduł nadawczo-odbiorczy LoRa 868 MHz|
-|4|A1,A2|Arduino Pro Mini|1| Wersja 3.3V|
+|1| |Moduł micro USB|1| Umożliwia zastosowanie standardowego zasilacza USB 5V|
+|2| |Konwerter USB-UART|1| Konieczny do wgrania oprogramowania do Arduino|
+|3| |RFM95W|1| Moduł nadawczo-odbiorczy LoRa 868 MHz|
+|4| |Arduino Pro Mini|1| Wersja 3.3V|
 |5|A1|Zasilacz USB 5V|1||
 |6|A2|Bateria|1|Bateria od 2.7V do 5.5V (np. dwie baterie AA)|
 
@@ -115,12 +115,12 @@ Z menu Arduino IDE wybieramy opcję `Szkic > Wgraj` i czekamy na wyświetlenie s
 
 Jeśli kompilacja i wgranie programu zakończyło się bez błedu, możemy odłączyć konwerter USB-UART od Arduino.
 
-#### Wersja  A1 z zasilaczem USB 5V
+#### Wariant  A1 z zasilaczem USB 5V
 Podłaczamy zasilacz USB 5V, korzystając z Modułu Micro USB połączonego z pinami Arduino jak na ilustracji poniżej. Przewody z modułu USB wpinamy w gniazda RAW (5V) oraz GND Arduino.
 
 ![Podłączenie zasilacza USB](../Media/devboard_A_5.jpg)
 
-#### Wersja A2 z baterią
+#### Wariant A2 z baterią
 
 Baterię podłączmy do gniazd VCC oraz GND Arduino
 
