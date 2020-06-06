@@ -1,20 +1,20 @@
 # Wersja minimalna urządzenia
 
 Wersja minimalna urządzenia jest najłatwiejsza do zbudowania dla początkującego użytkownika. 
-Wymaga zastosowania zewnętrznego zasilacza USB podłączonego bezpośrednio do Arduino. Ponieważ wykorzystuje 
-stabilizator napięcia wbudowany w Arduino Pro Mini, można pominąć montaż na płytce dodatkowych komponentów SMD.
+Wymaga zastosowania baterii lub zewnętrznego zasilacza USB podłączonego bezpośrednio do Arduino. W przypadku podłączenia zasilania bezpośrednio do Arduino można pominąć montaż na płytce dodatkowych komponentów SMD.
 
 > *Do zbudowana wersji minimalnej można użyć płytki w wersji 1.0 lub 1.1*
 
 ## Wymagane elementy
 
-| Nr| Element | Ilość | Uwagi |
-|-------|---------|-------|-------|
-|1|Moduł micro USB|1| Umożliwia zastosowanie standardowego zasilacza USB 5V|
-|2|Konwerter USB-UART|1| Konieczny do wgrania oprogramowania do Arduino|
-|3|RFM95W|1| Moduł nadawczo-odbiorczy LoRa 868 MHz|
-|4|Arduino Pro Mini|1| Wersja 3.3V|
-
+| Nr| Wersja | Element | Ilość | Uwagi |
+|-------|---|---------|-------|-------|
+|1|A1,A2|Moduł micro USB|1| Umożliwia zastosowanie standardowego zasilacza USB 5V|
+|2|A1,A2|Konwerter USB-UART|1| Konieczny do wgrania oprogramowania do Arduino|
+|3|A1,A2|RFM95W|1| Moduł nadawczo-odbiorczy LoRa 868 MHz|
+|4|A1,A2|Arduino Pro Mini|1| Wersja 3.3V|
+|5|A1|Zasilacz USB 5V|1||
+|6|A2|Bateria|1|Bateria od 2.7V do 5.5V (np. dwie baterie AA)|
 
 
 ## Lista czynności
@@ -44,6 +44,8 @@ Arduino z wlutowanymi goldpinami
 ### Podłączenie RFM95W i anteny
 
 Płytka z przylutowanym modułem RFM95 i anteną helikalną. Antena wykonana zgodnie z opisem zamieszczonym na blogu http://e.pavlin.si/2018/06/29/small-normal-mode-antenna-for-868mhz/ (powyżej płytki przewód do płytki stykowej wykorzystany do zrobienia anteny). Zamiast anteny helikalnej można przylutować prosty przewód lub drucik długości 8,7cm.
+
+>**Uwaga!** Po przylutowaniu RFM(%W nie podłączamy zasialania zanim nie przylutujemy anteny. **Podłączenie zasilania bez anteny może uszkodzić RFM95W**
 
 ![RFM95 i antena](../Media/devboard_A_3.jpg)
 
@@ -113,6 +115,12 @@ Z menu Arduino IDE wybieramy opcję `Szkic > Wgraj` i czekamy na wyświetlenie s
 
 Jeśli kompilacja i wgranie programu zakończyło się bez błedu, możemy odłączyć konwerter USB-UART od Arduino.
 
+#### Wersja  A1 z zasilaczem USB 5V
 Podłaczamy zasilacz USB 5V, korzystając z Modułu Micro USB połączonego z pinami Arduino jak na ilustracji poniżej. Przewody z modułu USB wpinamy w gniazda RAW (5V) oraz GND Arduino.
 
 ![Podłączenie zasilacza USB](../Media/devboard_A_5.jpg)
+
+#### Wersja A2 z baterią
+
+Baterię podłączmy do gniazd VCC oraz GND Arduino
+
