@@ -85,13 +85,13 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6 (makro `VBAT`).
 
 # Lista elementów
 W kolumnach A, B, C, D i E zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich wariantów zasilania urządzenia:
-* A - wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - zasilanie zewnętrzne 3.3V z opcją wykorzystania stabilizatora napięcia z Arduino Pro Mini
+* A - wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - zasilanie zewnętrzne 5V z wykorzystaniem stabilizatora napięcia z Arduino Pro Mini (opcjonalnie zasilanie zewnętrzne stabilizowane 3.V). [Instrukcja dla wersji A](doc/A_minimal.md)
 * B - zasilanie z portu USB
 * C - zasilanie bateriami o napięciu do **3V** (np. baterie alkaliczne lub litowe - guzikowe)
 * D - zasilanie bateriami litowymi nieładowalnymi o napięciu **3.6V**
 * E - zasilanie akumulatorami Li-Ion oraz Li-Po o napięciu **3.7V**
 
-> **UWAGA!** W wersji minimalnej jest możliwość wykorzystania stabilizatora napięcia z Arduino Pro Mini poprzez podłączenie zasilana do pinu RAW zamiast VCC. W takim przypadku należy stosować **tylko Arduino Pro Mini 3.3V** ze względu na dopuszczalne napięcie zasilania modułów RFM95W lub RN2483A.
+> **UWAGA!** Wersja minimalna wykorzystuje stabilizator napięcia z Arduino Pro Mini poprzez podłączenie zasilana do pinu RAW zamiast VCC. W takim przypadku należy stosować **tylko Arduino Pro Mini 3.3V** ze względu na dopuszczalne napięcie zasilania modułów RFM95W lub RN2483A.
 
 | Nazwa | Element |A|B|C|D|E| Sekcja |
 |:-----:|:--------|-|-|-|-|-|--------|
