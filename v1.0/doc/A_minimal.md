@@ -3,7 +3,7 @@
 Wersja minimalna urządzenia jest najłatwiejsza do zbudowania dla początkującego użytkownika. 
 Wymaga zastosowania baterii (wariant A1) lub zewnętrznego zasilacza USB (wariant A2) podłączonych bezpośrednio do Arduino. W przypadku podłączenia zasilania bezpośrednio do Arduino można pominąć montaż na płytce dodatkowych komponentów SMD.
 
-> *Do zbudowana wersji minimalnej można użyć płytki w wersji 1.0 lub 1.1*
+> *Do zbudowania wersji minimalnej można użyć płytki w wersji 1.0 lub 1.1*
 
 ## Wymagane elementy
 
