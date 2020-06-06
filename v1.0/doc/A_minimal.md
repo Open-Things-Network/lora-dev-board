@@ -1,7 +1,7 @@
 # Wersja minimalna urządzenia
 
 Wersja minimalna urządzenia jest najłatwiejsza do zbudowania dla początkującego użytkownika. 
-Wymaga zastosowania baterii lub zewnętrznego zasilacza USB podłączonego bezpośrednio do Arduino. W przypadku podłączenia zasilania bezpośrednio do Arduino można pominąć montaż na płytce dodatkowych komponentów SMD.
+Wymaga zastosowania baterii (wariant A1) lub zewnętrznego zasilacza USB (wariant A2) podłączonych bezpośrednio do Arduino. W przypadku podłączenia zasilania bezpośrednio do Arduino można pominąć montaż na płytce dodatkowych komponentów SMD.
 
 > *Do zbudowana wersji minimalnej można użyć płytki w wersji 1.0 lub 1.1*
 
@@ -13,7 +13,7 @@ Wymaga zastosowania baterii lub zewnętrznego zasilacza USB podłączonego bezpo
 |2| |Konwerter USB-UART|1| Konieczny do wgrania oprogramowania do Arduino|
 |3| |RFM95W|1| Moduł nadawczo-odbiorczy LoRa 868 MHz|
 |4| |Arduino Pro Mini|1| Wersja 3.3V|
-|5|A1|Zasilacz USB 5V|1||
+|5|A1|Zasilacz USB 5V|1| Możliwe zastosowanie zasilacza 16V|
 |6|A2|Bateria|1|Bateria od 2.7V do 5.5V (np. dwie baterie AA)|
 
 
