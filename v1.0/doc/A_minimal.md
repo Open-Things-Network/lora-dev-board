@@ -128,7 +128,8 @@ Baterię podłączmy do gniazd VCC oraz GND Arduino
 
 W przypadku zasilania bateryjnego warto rozważyć możliwość zmniejszenia poboru prądu przez Arduino oraz RFM95W. W tym celu należy:
 
-* wprowdzić Arduino oraz RFM95W w tryb uśpienia (z poziomu kodu aplikacji)
+* wprowdzić Arduino oraz RFM95W w tryb uśpienia - z poziomu kodu aplikacji poprzez użycie biblioteki LowPower https://github.com/rocketscream/Low-Power 
 * fizycznie odłączyć podsystem zasilania Arduino poprzez odlutowanie regulatora MIC5205 i diody LED1 lub usunięcie kropli cyny ze zworki SJ1 (jeśli mamy oryginalną wersję Arduino).
+Ważniejsze jest usunięcie LED1, bo MIC2505 pobiera w w trybie uśpienia jedynie dodatkowe 4 &micro;A
 
 ![Podsystem zasilania](../Media/devboard_A_7.jpg)
