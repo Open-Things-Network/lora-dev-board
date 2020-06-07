@@ -131,4 +131,4 @@ W przypadku zasilania bateryjnego warto rozważyć możliwość zmniejszenia pob
 * wprowdzić Arduino oraz RFM95W w tryb uśpienia (z poziomu kodu aplikacji)
 * fizycznie odłączyć podsystem zasilania Arduino poprzez odlutowanie regulatora MIC5205 i diody LED1 lub usunięcie kropli cyny ze zworki SJ1 (jeśli mamy oryginalną wersję Arduino).
 
-![Podsystem zasilania](../Media/devboard_A_6.jpg)
+![Podsystem zasilania](../Media/devboard_A_7.jpg)
