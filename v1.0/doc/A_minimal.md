@@ -124,6 +124,8 @@ Podłaczamy zasilacz USB 5V, korzystając z Modułu Micro USB połączonego z pi
 
 Baterię podłączmy do gniazd VCC oraz GND Arduino
 
+![Podsystem baterii](../Media/devboard_A_6.jpg)
+
 #### Zmniejszenie poboru prądu
 
 W przypadku zasilania bateryjnego warto rozważyć możliwość zmniejszenia poboru prądu przez Arduino oraz RFM95W. W tym celu należy:
