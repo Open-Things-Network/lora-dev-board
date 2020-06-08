@@ -10,7 +10,7 @@
 5. [Układ ładowania](#Układ-ładowania)
 6. [Diody LED](#Diody-LED)
 7. [Interfejsy komunikacyjne](#Interfejsy-komunikacyjne)
-8. [Pomiar napięcia baterii](#Pomiar-napięcia_baterii)
+8. [Pomiar napięcia baterii](#Pomiar-napięcia-baterii)
 9. [Sterowanie zasilaniem układów zewnętrznych](#Sterowanie-zasilaniem-układów-zewnętrznych)
 10. [Zworki](#Zworki)
 11. [Lista elementów](#Lista-elementów)
@@ -37,7 +37,7 @@ Płytka pozwala na realizację interfejsu LoRaWAN na dwa różne sposoby:
 ## Układ zasilania
 Zastosowany regulator napięcia LDO [TS2940CW33](https://www.taiwansemi.com/en/products/details/TS2940CW33).
 * Maksymalne napięcie zasilania - 26V
-* Minimalne napięcie zasilania - 3,5V
+* Minimalne napięcie zasilania - 3.5V
 * Spadek napięcia dla prądu 100mA - 100mV, 800mA - 600mV
 * Napięcie wyjściowe - 3.3V
 * Prąd maksymalny - 1A
@@ -85,7 +85,7 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6 (makro `VBAT`).
 
 # Lista elementów
 W kolumnach A, B, C, D i E zaznaczone zostały elementy wymagane (+) i opcjonalne (\*) dla odpowiednich wariantów zasilania urządzenia:
-* A - wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - zasilanie zewnętrzne bateryjne (opcjonalnie zasilanie zewnętrzne stabilizowane 3.V) lub 5V z wykorzystaniem stabilizatora napięcia z Arduino Pro Mini . [Instrukcja dla wersji A](doc/A_minimal.md)
+* A - wersja minimalna (tylko Arduino i moduł LoRa/LoRaWAN) - zasilanie zewnętrzne bateryjne (opcjonalnie zasilanie zewnętrzne stabilizowane 3.3V) lub 5V z wykorzystaniem stabilizatora napięcia z Arduino Pro Mini - [instrukcja dla wersji A](doc/A_minimal.md)
 * B - zasilanie z portu USB
 * C - zasilanie bateriami o napięciu do **3V** (np. baterie alkaliczne lub litowe - guzikowe)
 * D - zasilanie bateriami litowymi nieładowalnymi o napięciu **3.6V**
