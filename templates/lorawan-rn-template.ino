@@ -45,7 +45,7 @@ TheThingsNetwork ttn(rnSerial, Serial, freqPlan);
 
 // ------- intervals, buffers, etc.
 
-// data send interval in ms
+// data send interval in seconds
 const unsigned int TX_INTERVAL = 60;
 
 // data buffer
