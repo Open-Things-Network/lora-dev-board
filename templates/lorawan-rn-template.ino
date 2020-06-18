@@ -15,7 +15,7 @@
 #define JOIN_MODE_OTAA
 
 
-// ------- inputs, outputs and interfaces (see lora-dev-board scheme)
+// ------- inputs, outputs and interfaces (see lora-dev-board circuit diagram)
 
 #define USER_LED 2 // additional LED
 #define VOUT_ENABLE 3 // output voltage (TP5) control (VCC/VBAT - depends on JP9)
@@ -46,7 +46,7 @@ TheThingsNetwork ttn(rnSerial, Serial, freqPlan);
 // ------- intervals, buffers, etc.
 
 // data send interval in ms
-const unsigned TX_INTERVAL = 60000;
+const unsigned int TX_INTERVAL = 60;
 
 // data buffer
 #ifdef JUST_SEND_HELLO
@@ -85,7 +85,7 @@ void setup()
   Serial.println("--- JOIN");
   ttn.join(appEUI, appKey);
 #else
-  Serial.println("-- PERSONALIZE");
+  Serial.println("--- PERSONALIZE");
   ttn.personalize(devAddr, nwkSKey, appSKey);
   Serial.println("--- STATUS");
   ttn.showStatus();
@@ -105,9 +105,9 @@ void loop()
   digitalWrite(USER_LED, LOW);
 
 #ifdef SAVE_ENERGY
-  ttn.sleep(TX_INTERVAL);
+  ttn.sleep((unsigned long)TX_INTERVAL * 1000);
   Serial.flush();
-  for (int i = 0; i < int(TX_INTERVAL/8000); i++) 
+  for (int i = 0; i < int(TX_INTERVAL / 8); i++) 
   {
     LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
   }
