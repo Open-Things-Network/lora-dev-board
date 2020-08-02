@@ -71,6 +71,8 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R5, R6 (makro `VBAT`).
 ## Sterowanie zasilaniem układów zewnętrznych
 Układ sterowania jest złożony z dwóch tranzystorów. Pierwszy tranzystor NPN BC817 jest wysterowany z mikrokontrolera i wykorzystany jest do kluczowania drugiego tranzystora. Tranzystor polowy z kanałem typu P pozwala na sterowanie zasilaniem zewnętrznego urządzenia. Wybór zasilania dla zewnętrznego urządzenia dokonuje się zworką JP9. Możemy zasilać urządzenie z baterii lub stabilizowanego zasilania 3.3V. Zastosowany tranzystor polowy YJL2301F pozwala na obciążenie do 2A z baterii oraz 1A z VCC (ograniczenia wynikają z parametrów LDO). 
 
+> **UWAGA!** Aby poprawnie sterować oraz zasilać przetwornice np. Pololu S7V7F5z ww. układu zworkę JP9 należy zalutować w pozycji VBAT.
+
 ## Zworki
 |Symbol|Nazwa|Przeznaczenie|
 |:----:|:---:|:------------|
