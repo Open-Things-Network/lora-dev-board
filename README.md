@@ -18,6 +18,8 @@ Platforma została zaprojektowana tak, aby jej zbudowanie i uruchomienie było m
 
 ## Jak zacząć?
 
+W `templates` znajdują się szablony aplikacji, które z pewnością ułatwią realizację własnych pomysłów, a folder `projects` zawiera przykłady projektów zrealizowanych z wykorzystaniem platformy **lora-dev-board**.
+
 Poniższe punkty zostaną wkrótce uzupełnione opisami.
 
 * Projekt płytki: [kompletacja elementów](https://github.com/Open-Things-Network/lora-dev-board/blob/master/v1.0/README.md#lista-elementów) i budowa urządzenia
