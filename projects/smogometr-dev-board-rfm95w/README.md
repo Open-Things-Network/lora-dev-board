@@ -29,7 +29,7 @@ Przed:
 <br><img width="50%" alt="Drzwiczki ażurowe" src="media/Cage_undone.jpg">
 
 Po:
-![Amatorska klatka stevensona](media/Cage_done.jpg)
+<br><img width="50%" alt="Amatorska klatka stevensona" src="media/Cage_done.jpg">
 
 
 ## [Dodatkowe zdjęcia](media/)
