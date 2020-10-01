@@ -24,7 +24,7 @@ Celem projektu jest zaprezentowane możliwości płytki deweloperskiej [OTN](htt
 
 
 ## Opis połaczeń
-Czujnik SDS przesyła dane przez złącze szzeregowe i jest zasilany poprzez przetwornice napięciem 5V, natomiast pozostałe czujniki są zasilane bezpośrednio z płytki napięciem 3,3V i wykorzustują I2C. 
+Czujnik SDS przesyła dane przez złącze szeregowe i jest zasilany poprzez przetwornicę napięciem 5V, natomiast pozostałe czujniki są zasilane bezpośrednio z płytki napięciem 3,3V i wykorzustują magistralę I2C. 
 
 
 ## Budowa klatki meteorologicznej
