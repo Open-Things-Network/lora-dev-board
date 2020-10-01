@@ -26,7 +26,7 @@ Celem projektu jest zaprezentowane możliwości płytki deweloperskiej [OTN](htt
 Klatka meteorologiczna została zbudowana na bazie drewnianych drzwiczek ażurowych i desek dostępnych w markecie budowlanym. Klatka wymaga zwiększenia kąta nachylenia dachu, na którym umieszczony zostanie panel słoneczny oraz zabezpieczenie jej powierzchni przed deszczem i wilgocią.
 
 Przed:
-![Drzwiczki ażurowe](media/Cage_undone.jpg?s=20)
+<img width="200" alt="Drzwiczki ażurowe" src="/media/Cage_undone.jpg">
 
 Po:
 ![Amatorska klatka stevensona](media/Cage_done.jpg)
