@@ -6,7 +6,7 @@ Celem projektu jest zaprezentowane możliwości płytki deweloperskiej [OTN](htt
 
 ## Zastosowane urządzenia
  * Arduino Pro Mini (odpowiednik) - 3,3V ATmega328P
- * Moduł radiowy LoRa 868MHz
+ * Moduł radiowy LoRa 868MHz RFM95W
  * Moduł GY-302 z czujnikiem oświetlenia BH1750
  * Czujnik ciśnienia, wilgotności i temperatury Bosch BME280
  * Czujnik pyłu zawieszonego Nova Fitness SDS011
