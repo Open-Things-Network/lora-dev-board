@@ -14,12 +14,17 @@ Celem projektu jest zaprezentowane możliwości płytki deweloperskiej [OTN](htt
  * Akumulator Li-Po Akyga 3,7V/500mAh
  * Panel słoneczny 136 x 110 mm o mocy 2W
  * Antena 868MHz ze złączem U.FL
+ * Przewody Dupont
 
 
 ## Biblioteki do czujników
  * [Adafruit BME280 Library by Adafruit](https://github.com/adafruit/Adafruit_BME280_Library)
  * [BH1750 by Christopher Laws](https://github.com/claws/BH1750)
  * [SDS by OTN](https://github.com/Open-Things-Network/workshops/tree/master/smogometr/libraries/sds)
+
+
+## Opis połaczeń
+Czujnik SDS przesyła dane przez złącze szzeregowe i jest zasilany poprzez przetwornice napięciem 5V, natomiast pozostałe czujniki są zasilane bezpośrednio z płytki napięciem 3,3V i wykorzustują I2C. 
 
 
 ## Budowa klatki meteorologicznej
