@@ -29,7 +29,7 @@ Przed:
 <img width="200" alt="Drzwiczki ażurowe" src="/media/Cage_undone.jpg">
 
 Po:
-![Amatorska klatka stevensona](media/Cage_done.jpg)
+![Amatorska klatka stevensona](projects/smogometr-dev-board-rfm95w/media/Cage_done.jpg)
 
 
 ## [Dodatkowe zdjęcia](media/)
