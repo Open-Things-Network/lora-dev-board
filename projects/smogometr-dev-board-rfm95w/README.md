@@ -25,7 +25,7 @@ Celem projektu jest zaprezentowane możliwości płytki deweloperskiej [OTN](htt
 ## Budowa klatki meteorologicznej
 Klatka meteorologiczna została zbudowana na bazie drewnianych drzwiczek ażurowych i desek dostępnych w markecie budowlanym. Klatka wymaga zwiększenia kąta nachylenia dachu, na którym umieszczony zostanie panel słoneczny oraz zabezpieczenie jej powierzchni przed deszczem i wilgocią.
 
-![Amatorska klatka stevensona](media/smogometr-heca-1.jpg)
+![Amatorska klatka stevensona](media/Cage_done.jpg)
 
 
 ## [Dodatkowe zdjęcia](media/)
