@@ -14,7 +14,6 @@ Celem projektu jest zaprezentowane możliwości płytki deweloperskiej [OTN](htt
  * Akumulator Li-Po Akyga 3,7V/500mAh
  * Panel słoneczny 136 x 110 mm o mocy 2W
  * Antena 868MHz ze złączem U.FL
- * Przewody Dupont
 
 
 ## Biblioteki do czujników
