@@ -20,7 +20,7 @@ Celem projektu jest zaprezentowane możliwości płytki deweloperskiej [OTN](htt
 ## Biblioteki do czujników
  * [Adafruit BME280 Library by Adafruit](https://github.com/adafruit/Adafruit_BME280_Library)
  * [BH1750 by Christopher Laws](https://github.com/claws/BH1750)
- * [SDS by OTN](https://github.com/Open-Things-Network/workshops/tree/master/smogometr/libraries/sds)
+ * [SDS by Otwarta Sieć Rzeczy](https://github.com/Open-Things-Network/workshops/tree/master/smogometr/libraries/sds)
 
 
 ## Opis połaczeń
