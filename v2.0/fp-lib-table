@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name OSR_BOARD)(type KiCad)(uri ${KIPRJMOD}/lib/OSR_BOARD.pretty)(options "")(descr ""))
+)

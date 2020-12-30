@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name RN2483-I_RM095)(type Legacy)(uri ${KIPRJMOD}/lib/RN2483-I_RM095.lib)(options "")(descr ""))
+  (lib (name U.FL-R)(type Legacy)(uri ${KIPRJMOD}/lib/U.FL-R.lib)(options "")(descr ""))
+)
