@@ -243,66 +243,6 @@ F 3 "~" H 2250 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Jumper:SolderJumper_2_Open JP4
-U 1 1 5F6E2336
-P 1900 3450
-F 0 "JP4" H 1800 3350 50  0000 C CNN
-F 1 "TX" H 1850 3300 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1900 3450 50  0001 C CNN
-F 3 "~" H 1900 3450 50  0001 C CNN
-	1    1900 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Open JP3
-U 1 1 5F6E2D2E
-P 1900 3350
-F 0 "JP3" H 1800 3550 50  0000 C CNN
-F 1 "RX" H 1850 3450 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1900 3350 50  0001 C CNN
-F 3 "~" H 1900 3350 50  0001 C CNN
-	1    1900 3350
-	1    0    0    -1  
-$EndComp
-Text GLabel 1750 3350 0    50   Input ~ 0
-D8\Rx
-Text GLabel 1750 3450 0    50   Input ~ 0
-D9\Tx
-$Comp
-L Jumper:SolderJumper_2_Open JP1
-U 1 1 5F6E53ED
-P 3700 2750
-F 0 "JP1" H 3600 2950 50  0000 C CNN
-F 1 "RN_LED" H 3650 2850 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3700 2750 50  0001 C CNN
-F 3 "~" H 3700 2750 50  0001 C CNN
-	1    3700 2750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Open JP2
-U 1 1 5F6E6210
-P 3800 2750
-F 0 "JP2" H 3700 2650 50  0000 C CNN
-F 1 "RN_LED" H 3750 2550 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3800 2750 50  0001 C CNN
-F 3 "~" H 3800 2750 50  0001 C CNN
-	1    3800 2750
-	0    -1   -1   0   
-$EndComp
-Text GLabel 3700 2900 3    50   Input ~ 0
-A5\SCL
-Text GLabel 3800 2900 3    50   Input ~ 0
-A4\SDA
-Wire Wire Line
-	3650 2550 3700 2550
-Wire Wire Line
-	3700 2550 3700 2600
-Wire Wire Line
-	3650 2450 3800 2450
-Wire Wire Line
-	3800 2450 3800 2600
-$Comp
 L Device:C_Small C1
 U 1 1 5F87660A
 P 9200 1200
@@ -1916,4 +1856,52 @@ Wire Wire Line
 Connection ~ 9975 5600
 Wire Wire Line
 	9975 5600 9975 5625
+$Comp
+L Connector:TestPoint TP22
+U 1 1 5FF4E3CC
+P 2050 3350
+F 0 "TP22" V 2004 3538 50  0000 L CNN
+F 1 "RN_RX" V 2095 3538 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2250 3350 50  0001 C CNN
+F 3 "~" H 2250 3350 50  0001 C CNN
+	1    2050 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint TP23
+U 1 1 5FF4EC8A
+P 1875 3450
+F 0 "TP23" V 1829 3638 50  0000 L CNN
+F 1 "RN_TX" V 1920 3638 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2075 3450 50  0001 C CNN
+F 3 "~" H 2075 3450 50  0001 C CNN
+	1    1875 3450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1875 3450 2050 3450
+$Comp
+L Connector:TestPoint TP21
+U 1 1 5FF5527B
+P 3650 2550
+F 0 "TP21" V 3604 2738 50  0000 L CNN
+F 1 "RN_SCL" V 3695 2738 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 3850 2550 50  0001 C CNN
+F 3 "~" H 3850 2550 50  0001 C CNN
+	1    3650 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP20
+U 1 1 5FF5562F
+P 3800 2450
+F 0 "TP20" V 3754 2638 50  0000 L CNN
+F 1 "RN_SDA" V 3845 2638 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4000 2450 50  0001 C CNN
+F 3 "~" H 4000 2450 50  0001 C CNN
+	1    3800 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 2450 3650 2450
 $EndSCHEMATC
