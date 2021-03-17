@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "LoRa Dev Board RN2483"
-Date "2021-02-18"
-Rev "1.1"
+Date "2021-03-17"
+Rev "2.2"
 Comp "Otwarta Sieć Rzeczy"
 Comment1 "Sprawdził: Mariusz Kubas"
 Comment2 "Kreślił: Paweł Jagowdzik"
