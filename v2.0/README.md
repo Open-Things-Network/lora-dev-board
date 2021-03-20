@@ -77,4 +77,5 @@ TODO
 
 # Uwagi
 Na pierwszych wersjach płytki pojawił się błąd w opisie elementów Q1 i Q2. Każdy kto otrzyma taką wersję płytki zostanie o tym poinformowany.
+
 ![Front Silk Update](Media/Q1Q2.png)
