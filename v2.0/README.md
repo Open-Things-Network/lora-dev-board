@@ -21,7 +21,7 @@ Platforma deweloperska oparta na mikrokontrolerze ATMega328p. Na płytce znajduj
 Do komunikacji z siecią LoRaWAN służy moduł RN2483.
 
 ## Bootloader
-TODO
+Do mikrokontrolera wgrany jest bootloader z Arduino Pro Mini za pomocą złącz programowania ISP, dzięki czemu można przygotować oraz wgrać program przez ARDIUNO IDE lub PLATFORMIO wykorzystując konwerter USB-UART.
 
 
 ## Interfejs LoRaWAN
@@ -50,8 +50,6 @@ Zastosowany kontroler ładowania akumulatorów litowo-polimerowych (Li-Po) i lit
 |VCC|sygnalizuje obecność napięcia zasilania|
 |LED|dioda do ogólnego zastosowania w aplikacji użytkownika (`USER_LED`)|
 
-
-
 ## Interfejsy komunikacyjne
 Do podłączenia zewnętrznych czujników dostępne są interfejsy:
 * I2C (na magistrali wlutowane są rezystory podciągające)
@@ -73,7 +71,38 @@ Wykorzystane wejście analogowe A0 i dzielnik napięcia R4, R5 (makro `VBAT`).
 Układ sterowania jest złożony z dwóch tranzystorów. Pierwszy tranzystor NPN BC817 jest wysterowany z mikrokontrolera i wykorzystany jest do kluczowania drugiego tranzystora. Tranzystor polowy z kanałem typu P pozwala na sterowanie zasilaniem zewnętrznego urządzenia. Wybór zasilania dla zewnętrznego urządzenia dokonuje się zworką JP5(BATT/VEXT). Możemy zasilać urządzenie z stabilizowanego zasilania 3.3V lub zasilanie podać z zewnątrz (lub innego punktu), wymaga to podłączenia napięcia na pad VEXT oraz rozcięcie zworki JP5 i zalutowaniu jej w pozycji EXT. Zastosowany tranzystor polowy YJL2301F pozwala na obciążenie do 2A z źródła zewnętrznego oraz 600mA z VCC (ograniczenia wynikają z parametrów LDO). 
 
 # Lista elementów
-TODO
+| Oznaczenie | Element | Obudowa | Ilość na PCB |
+|:-----:|:--------|:------|:--|
+|KOSZYK|2915 keystone|n.d.|2|
+|C1-C3;C6|100nF|0805|4|
+|C4-C5|22pF|0805|2|
+|C7|1uF|0805|1|
+|C8|n.d.|0805|1|
+|D1|LED YELLOW|0805|1|
+|D2|LED GREEN|0805|1|
+|D3|LED RED|0805|1|
+|D4|LED BLUE|0805|1|
+|D5-D6|1N5819|SOD-123|2|
+|J1|u.FL|n.d.|1|
+|J2;J5|PinHeader|1x04|2|
+|J3|PinHeader|2x03|1|
+|J4|PinHeader|1x05|1|
+|J6|PinHeader|1x02|1|
+|J7-J8|JST|PH-S2B|2|
+|J9|USB|10118194-0001LF AMPHENOL|n.d.|1|
+|Q1|YJL2301F|SOT-23|1|
+|Q2|BC817|SOT-23|1|
+|R1-R2;R6-R7;R9|10k|0805|5|
+|R3|50R|0805|1|
+|R5|33k|0805|1|
+|R8;R10-R13|1k|0805|5|
+|R14|4k|0805|1|
+|SW1|SKRPACE010|n.d.|1|
+|U1|ATMega328p-AU|TQFP-32|1|
+|U2|CH340E|MSOP-10|1|
+|U3|AP2112K-3.3|SOT-23-5|1|
+|U4|MCP73831-2-OT|SOT-23-5|1|
+|Y1|16MHz|3225|1|
 
 # Uwagi
 Na pierwszych wersjach płytki pojawił się błąd w opisie elementów Q1 i Q2. Każdy kto otrzyma taką wersję płytki zostanie o tym poinformowany.
