@@ -11,6 +11,8 @@
 #define USER_LED 2
 #define ONE_WIRE_BUS 9
 
+#define VBAT (analogRead(A0) * 0.013) // napięcie z baterii mierzone na wejściu A0 (dzielnik R4, R5 i VREF = 3.3V)
+
 #define DS18_TEMPERATURE_CHANNEL 11
 
 #define debugSerial Serial
@@ -88,6 +90,9 @@ void getData()
     lppdata.addRelativeHumidity(2, humidity);
     lppdata.addBarometricPressure(3, pressure);
   }
+
+  // napięcie baterii
+  lppdata.addAnalogInput(4, VBAT);
   
   // odczyt danych z czujników DS18B20
   if (dsFound)
