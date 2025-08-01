@@ -14,7 +14,7 @@
 #define VBAT (analogRead(A0) * 0.013) // napięcie z baterii mierzone na wejściu A0 (dzielnik R4, R5 i VREF = 3.3V)
 
 #define DS18_TEMPERATURE_CHANNEL 11
-
+#define RN_RESET_PIN 4
 #define debugSerial Serial
 SoftwareSerial loraSerial(6, 7); // port do komunikacji z RN2483 (RX, TX)
 
@@ -146,6 +146,8 @@ void setup()
   // uruchomienie komunikacji z RN2483
   loraSerial.begin(9600);
   ttn.wake();
+  ttn.resetHard(RN_RESET_PIN);
+  ttn.reset(false);
   ttn.onMessage(message);
 
   // odczyt i wyświetlanie informacji z RN2483
